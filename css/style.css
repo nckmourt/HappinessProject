@@ -1,0 +1,32 @@
+header {
+    padding: 156px 0 100px;
+  }
+  
+section {
+    padding: 15px;
+  } 
+
+h1 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+
+.jumbotron {
+    background-image: url(../images/balloons.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0; 
+   }
+.visuals {
+    margin-top: 0;
+    background-image: url(../images/balloon_2.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    
