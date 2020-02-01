@@ -25,7 +25,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 db = SQLAlchemy(app)
 
 # Create our database model
-class Happy(db.Model):
+class Happy():
     __tablename__ = 'happy'
 
     country = db.Column(db.String, primary_key=True)
@@ -50,6 +50,8 @@ def happy_2015():
     results = db.session.query(data_2015).\
         order_by(data_2015.happiness_rank()).\
         limit(10).all()
+        
+    return jsonify(results)
 
 if __name__ == "__main__":
     app.run()
