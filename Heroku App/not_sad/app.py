@@ -18,7 +18,7 @@ app = Flask(__name__)
 
 from flask_sqlalchemy import SQLAlchemy
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///db.sqlite"
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ezivkxcmfhmwns:ade7e62a63b37a2e37499152c4215d3ea0d7f6660a0fe9728c9a59f999b90701@ec2-52-203-98-126.compute-1.amazonaws.com:5432/d838r6r93rir05'
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db.sqlite"
 
@@ -50,7 +50,7 @@ def happy_2015():
     results = db.session.query(data_2015).\
         order_by(data_2015.happiness_rank()).\
         limit(10).all()
-        
+
     return jsonify(results)
 
 if __name__ == "__main__":
