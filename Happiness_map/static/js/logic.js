@@ -28,7 +28,7 @@ d3.json(geoData, function(data) {
     valueProperty: "happiness_rank",
 
     // Set color scale
-    scale: ["#0cf70c","#ff0000"],
+    scale: ["#00FFFF","#800000"],
 
     // Number of breaks in step range
     steps: 7,
@@ -45,13 +45,13 @@ d3.json(geoData, function(data) {
     // Binding a pop-up to each layer
     onEachFeature: function(feature, layer) {
       layer.bindPopup("Country: " + feature.properties.country + "<br>Happiness Rank:" +
-        feature.properties.happiness_rank + "<br>Happiness Score:" +
-        feature.properties.happiness_score + "<br>GDP Per Capita:" +
-        feature.properties.gdp_per_capita + "<br>Social Support:" +
-        feature.properties.social_support + "<br>Life Expectancy:" +
-        feature.properties.life_expectancy + "<br>Freedom:" +
-        feature.properties.freedom+ "<br>Generosity:" +
-        feature.properties.generosity+ "<br>Gov Corr:" +
+        feature.properties.happiness_rank + "<br>Happiness Score: " +
+        feature.properties.happiness_score + "<br>GDP Per Capita: " +
+        feature.properties.gdp_per_capita + "<br>Social Support: " +
+        feature.properties.social_support + "<br>Life Expectancy: " +
+        feature.properties.life_expectancy + "<br>Freedom: " +
+        feature.properties.freedom+ "<br>Generosity: " +
+        feature.properties.generosity+ "<br>Gov Corr: " +
         feature.properties.government_corr);
     }
   }).addTo(myMap);
