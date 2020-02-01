@@ -44,18 +44,18 @@ d3.json(geoData, function(data) {
 
     // Binding a pop-up to each layer
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("Country: " + feature.properties.country + "<br>&#129351; Happiness Rank:" +
+      layer.bindPopup("<b> Country: " + feature.properties.country + "<br>&#129351; Happiness Rank: " +
         feature.properties.happiness_rank + "<br>&#128515; Happiness Score: " +
         feature.properties.happiness_score + "<br>&#128178; GDP Per Capita: " +
         feature.properties.gdp_per_capita + "<br>&#128106; Social Support: " +
         feature.properties.social_support + "<br>&#128368; Life Expectancy: " +
         feature.properties.life_expectancy + "<br>&#127480; Freedom: " +
         feature.properties.freedom+ "<br>&#128147; Generosity: " +
-        feature.properties.generosity+ "<br>&#128706	; Gov Corr: " +
+        feature.properties.generosity+ "<br>&#128706; Gov Corr: " +
         feature.properties.government_corr);
     }
   }).addTo(myMap);
-
+  
   // Set up the legend
   var legend = L.control({ position: "bottomleft" });
   legend.onAdd = function() {
