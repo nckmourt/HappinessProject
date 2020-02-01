@@ -1,14 +1,14 @@
 // Creating map object
 var myMap = L.map("map", {
   center: [36, 0],
-  zoom: 2
+  zoom: 1.5
 });
 
 // Adding tile layer
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
   maxZoom: 18,
-  id: "mapbox.streets",
+  id: "mapbox.light",
   accessToken: API_KEY
 }).addTo(myMap);
 
@@ -28,7 +28,7 @@ d3.json(geoData, function(data) {
     valueProperty: "happiness_rank",
 
     // Set color scale
-    scale: ["#00a194","#a1000b"],
+    scale: ["#0cf70c","#ff0000"],
 
     // Number of breaks in step range
     steps: 7,
@@ -37,7 +37,7 @@ d3.json(geoData, function(data) {
     mode: "q",
     style: {
       // Border color
-      color: "#91aea6",
+      color: "#FFFFFF",
       weight: 1,
       fillOpacity: 0.5
     },
@@ -57,7 +57,7 @@ d3.json(geoData, function(data) {
   }).addTo(myMap);
 
   // Set up the legend
-  var legend = L.control({ position: "bottomright" });
+  var legend = L.control({ position: "bottomleft" });
   legend.onAdd = function() {
     var div = L.DomUtil.create("div", "info legend");
     var limits = geojson.options.limits;
