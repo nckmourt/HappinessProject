@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Factor Correlation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<style>
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+</style>
+
+<body>
+    <div class="container-fluid content-row">
+        <div class="jumbotron" style="text-align: center">
+            <h1>6 Factors Most Correlated with World Happiness</h1>
+        </div>
+ 
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center">Happiness and GDP</h5>
+                    <div class="responsive-plot" id="plot"></div>
+                    <p class="card-text">Gross Domestic Product (GDP) is the annual value of all goods and services a country produces. This number 
+                        is normally calculated independently by country and by a national government statistical agency.</p>            
+                </div>
+            </div>
+        </div> 
+        <div class="col-sm-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center">Happiness and Social Support</h5>
+                    <div class="responsive-plot" id="plot2"></div>
+                    <p class="card-text">Social Support is defined by the same survey results of the Gallup World Poll data. 
+                        The average of all answers determines the outcome of this factor per country.</p>   
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center">Happiness and life Expectancy</h5>
+                    <div class="responsive-plot" id="plot3"></div>
+                    <p class="card-text">The estimate for Life Expectancy represents the average number of "healthy" years a 
+                        child at birth is estimated to live. It's calculated by the World Health Organization (WHO) based on 
+                        over 100 different health factors.</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="row mt-3">
+        <div class="col-sm-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center">Happiness and Freedom</h5>
+                    <div class="responsive-plot" id="plot4"></div>
+                    <p class="card-text">Freedom is based on the average response to the Gallup World Poll question: "Are you 
+                        satisfied or dissatisfied with your freedom to choose what you do with your life?</p>  
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center">Happiness and Generosity</h5>
+                    <div class="responsive-plot" id="plot5"></div>
+                    <p class="card-text">Generosity is based on the response to the Gallup World Poll question:
+                        "Have you donated money to a charity in the past month?" </p> 
+                </div>
+            </div>
+        </div> 
+        <div class="col-sm-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center">Happiness and Government Corruption</h5> 
+                    <div class="responsive-plot" id="plot6"></div>
+                    <p class="card-text">Government Corruption is based on the average response to the following 2 questions: 1) "Is corruption
+                        widespread throughout the government?" and 2) "Is corruption widespread within businesses?".</p>           
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="plots.js"></script>
+    
+</body>
+
+</html>
