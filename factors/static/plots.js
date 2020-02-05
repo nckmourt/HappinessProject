@@ -11,6 +11,7 @@ var government_corr  = [];
 var country  = [];
 var happiness_rank  = [];
 
+
 // d3.csv("clean_2019.csv").then(function(data) {
 d3.json("../api/year/2019").then(function(data) {
   console.log(data[0]);
@@ -22,11 +23,11 @@ d3.json("../api/year/2019").then(function(data) {
   happiness_rank =data.map(d => d[1]);
   happiness_score = data.map(d => d[2]);  
   gdp_per_capita = data.map(d => d[3]);
-  social_support = data.map(d => d[4]);
   life_expectancy = data.map(d => d[5]);
   freedom = data.map(d => d[6]);
   generosity = data.map(d => d[7]);
   government_corr = data.map(d => d[8]);
+  social_support = data.map(d => d[9]);
   
   
   var gdp = {
@@ -77,9 +78,9 @@ d3.json("../api/year/2019").then(function(data) {
   };
 
   var data2 = [support];
-
+  
   var layout2 = {
-    // title: 'Happiness and Social Support',
+    // title: 'Happiness and Social Support (2018-)',
     yaxis: {
       title: 'Social Support',
       range: [0, 2],
@@ -93,6 +94,7 @@ d3.json("../api/year/2019").then(function(data) {
 
   Plotly.newPlot('plot2', data2, layout2);
 
+  
   var life = {
       x: happiness_score,
       y: life_expectancy, 
@@ -122,7 +124,7 @@ d3.json("../api/year/2019").then(function(data) {
     text: 'happiness rank'
   };
 
-  Plotly.newPlot('plot3', data3, layout3);
+  Plotly.newPlot('plot3', data3,layout3);
 
   var freedom = {
       x: happiness_score,
