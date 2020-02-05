@@ -1,25 +1,34 @@
 //  python -m http.server
 // Use d3 to read in current year dataset
 
-
+var happiness_score = [];
+var gdp_per_capita  = [];
+var social_support = [];
+var life_expectancy  = [];
+var freedom  = [];
+var generosity  = [];
+var government_corr  = [];
+var country  = [];
+var happiness_rank  = [];
 
 // d3.csv("clean_2019.csv").then(function(data) {
-d3.json("/api/year/2019").then(function(data) {
+d3.json("../api/year/2019").then(function(data) {
   console.log(data[0]);
 });
 
 // d3.csv("clean_2019.csv").then(function(data) {
-d3.json("/api/year/2019").then(function(data) {   
-  happiness_score = data.map(d => d.happiness_score);
-  gdp_per_capita = data.map(d => d.gdp_per_capita);
-  social_support = data.map(d => d.social_support);
-  life_expectancy = data.map(d => d.life_expectancy);
-  freedom = data.map(d => d.freedom);
-  generosity = data.map(d => d.generosity);
-  government_corr = data.map(d => d.government_corr);
-  country = data.map(d => d.country);
-  happiness_rank = data.map(d => d.happiness_rank);
-
+d3.json("../api/year/2019").then(function(data) {   
+  country = data.map(d => d[0]);
+  happiness_rank =data.map(d => d[1]);
+  happiness_score = data.map(d => d[2]);  
+  gdp_per_capita = data.map(d => d[3]);
+  social_support = data.map(d => d[4]);
+  life_expectancy = data.map(d => d[5]);
+  freedom = data.map(d => d[6]);
+  generosity = data.map(d => d[7]);
+  government_corr = data.map(d => d[8]);
+  
+  
   var gdp = {
       x: happiness_score,
       y: gdp_per_capita,
@@ -101,7 +110,7 @@ d3.json("/api/year/2019").then(function(data) {
   var data3 = [life];
 
   var layout3 = {
-    // title: 'Happiness and life Expectancy',
+    // title: 'Happiness and Life Expectancy',
     yaxis: {
       title: 'life Expectancy',
       range: [0, 2],
