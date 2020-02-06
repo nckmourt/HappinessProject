@@ -15,12 +15,12 @@ var year = [];
 
 // Use d3 to read in current year dataset
 // d3.csv("clean_2019.csv").then(function(data) {
-d3.json("../api/year/2019").then(function(data) {
+d3.json("/api/year/2019").then(function(data) {
   console.log(data[0]);
 });
 
 // d3.csv("clean_2019.csv").then(function(data) {    
-d3.json("../api/year/2019").then(function(data) {   
+d3.json("/api/year/2019").then(function(data) {   
   country = data.map(d => d[0]);
   happiness_rank =data.map(d => d[1]);
   happiness_score = data.map(d => d[2]);  
