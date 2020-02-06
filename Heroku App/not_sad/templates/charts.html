@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     
-<!-- import css file -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
     <link rel="stylesheet" href="../static/css/style.css">
 
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
@@ -38,7 +39,7 @@
                             <a class="nav-link js-scroll-trigger" href="index.html#map">World Map</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="index.html#scatter">Scatter Plot</a>
+                        <a class="nav-link js-scroll-trigger" href="index.html#scatter">Factors Over Time</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="index.html#top">Top Ten</a>
@@ -50,7 +51,7 @@
                             <a class="nav-link js-scroll-trigger" href="charts.html#rankings">World Rankings</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="about.html">About Us</a>
+                            <a class="nav-link js-scroll-trigger" href="process.html">About Us</a>
                         </li>
                     </ul>
                 </div>
@@ -82,7 +83,7 @@
         
         <div class="container-fluid content-row">
             <div class="jumbotron" style="text-align: center">
-                <h1>6 Factors Most Correlated with World Happiness</h1>
+                <h1>Six Factors Most Correlated with World Happiness</h1>
             </div>
         
         <div class="row">
@@ -153,21 +154,41 @@
         </div>
     </div>
 
-    <!-- rankings -->
-    <div id="rankings">
-        <div class="container-fluid content-row">
-            <div class="jumbotron" style="text-align: center">
-                <h1>2019 Happiest Countries by Rank</h1>
-            </div> 
+    <!-- rankings bar chart -->
 
-            <div class="row" style="overflow-y: scroll; height:375px; width: auto; outline: lightskyblue;">
-                <div class="col-md-12">
-                    <div id="rank"></div>
-                </div>
-            </div>
+    <div class="container-fluid content-row">
+        <div class="jumbotron" style="text-align: center">
+            <h1>Happiest Countries by Rank</h1>
         </div>
-        <hr>
+
+        <div class="tweety">
+            <h3 style="text-align: center"> Select a year:&nbsp;&nbsp;&nbsp;
+            <select id="selYear" style="font-size:25px; width: auto">
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option> 
+            </select>
+            </h3><br>
+            <p style="font-size:18px; text-align: center">(scroll to see more)</p>   
+            <br>
+        </div> 
+
+    <div class="plotbox" style="overflow-y: scroll; height:600px; width: auto; outline: lightskyblue">
+        <div id="rank" ></div>
     </div>
+    <hr>
+
+    <!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- add in scripts -->
 
     <script type="text/javascript" src="../static/js/factors.js"></script>
     <script type="text/javascript" src="../static/js/bar.js"></script>

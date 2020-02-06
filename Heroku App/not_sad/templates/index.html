@@ -23,6 +23,8 @@
     <script type="text/javascript" src="../static/js/choropleth.js"></script>
 ​
     <!-- Our CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -46,7 +48,7 @@
                           <a class="nav-link js-scroll-trigger" href="#map">World Map</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#scatter">Scatter Plot</a>
+                        <a class="nav-link js-scroll-trigger" href="#scatter">Factors Over Time</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#top">Top Ten</a>
@@ -58,7 +60,7 @@
                           <a class="nav-link js-scroll-trigger" href="charts.html#rankings">World Rankings</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link js-scroll-trigger" href="about.html">About Us</a>
+                          <a class="nav-link js-scroll-trigger" href="process.html">About Us</a>
                       </li>
                   </ul>
               </div>
@@ -69,28 +71,49 @@
   <!-- create header -->
   <div class="jumbotron">
     <div class="container">
-        <h1 class="display-4">the world happiness report</h1>
-        <p class="lead">what makes us happy? <br> understanding the factors used to measure happiness across the world and how those factors change over time.</p>
+        <h1 class="display-4">What Makes Us Happy?</h1>
+        <p class="lead">Exploring The World Happiness Report <br> Understanding the factors used to measure happiness across the world and how those factors change over time.</p>
     </div>
   </div>
 
     <!-- div with world map visualization -->
-    <h1>2019 world happiness report results</h1>
+    <h1>Global Happiness</h1>
     <div id="map"></div>
+
+    <div class="card">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p> I feel that the American dream can be achieved best in the Nordic countries, where every child no matter their background or the background of their families can become anything.
+            </p>
+            <footer class="blockquote-footer">Sanna Marin, the 34-year-old prime minister of Finland, to the <cite title="Washington Post">Washington Post</cite></footer>
+          </blockquote>
+        </div>
+    </div>
+
 
     <!-- div with scatter plot -->
     <section id="scatter">
-        <h1>scatter plot</h1>
+        <h1>Factors' Impact on Happiness Over Time</h1>
         <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+        <div class="card">
+            <div class="card-body">
+                The visualization shows the relationship between life expectancy and GDP per capita, and their combined effect on Happiness scores in an interactive time-adjustable interface. We can learn which countries have either suffered or prospered as a result of changes in GDP per capita and life expectancy, which is a variable that represents a combination of factors that contribute to quality of life, such as access to healthcare, crime rates, infant mortality, economic development, and improvement in environmental conditions.
+            </div>
+        </div>
+
     </section>
     
     <!-- div with top ten information -->
     <div id="top">
-        <h1>2019 Top 10 Happiest Countries</h1>
+        <h1>Top 10 Happiest Countries</h1>
+        <p>based on 2019's World Happiness Report Data</p>
         <hr>
 
-        <h2>2020 World Happiness Report</h2>
-        <p>Wikipedia: The free encyclopedia. (2004, July 22). FL: Wikimedia Foundation, Inc. Retrieved February 1, 2020 from https://www.wikipedia.org.</p>
+        <!-- <h3>2020 World Happiness Report</h3> -->
+        <p><a href="https://en.wikipedia.org/wiki/World_Happiness_Report">Wikipedia</a></p>
         <br><br>
 
         <!-- <-- Slideshow container --> 
@@ -215,12 +238,20 @@
         </script>
 
         <div class="sh-content">
-            <br><br><h3> <img src="../static/images/usa.jpg" alt="usa" style="width:6%" align="left"> &nbsp; So... Where's the US?</h3>  
+            <br><br><h3> <img src="../static/images/usa.jpg" alt="usa" style="width:6%"> &nbsp; So... Where's the US?</h3>  
             <p>The United States falls again, ranking #19. Why are Americans so unhappy...or aren't they?  Stay tuned for PROJECT 3 to find out! </p>
         </div>
     </div>
 
 </div>
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
 <!-- add in scripts -->
 
     <!-- <script type="text/javascript" src="../static/js/factors.js"></script> 
