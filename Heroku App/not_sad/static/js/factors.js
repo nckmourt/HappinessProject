@@ -28,8 +28,7 @@ d3.csv("../static/data/clean_2019.csv").then(function(data) {
   generosity = data.map(d => d[7]);
   government_corr = data.map(d => d[8]);
   social_support = data.map(d => d[9]);
-  console.log(data);
-});
+
   var gdp = {
       x: happiness_score,
       y: gdp_per_capita,
