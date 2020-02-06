@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+    color: black; 
+    font-family: "Tangerine", serif;
+}
+p {
+    text-align: center;
+}
+
+.jumbotron {
+    background-image: url(../images/balloons.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0; 
+} 
+
+.content {
+    background-image: url(../images/balloons.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+
+}
+
+.about {
+    background-image: url(../images/balloons.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
