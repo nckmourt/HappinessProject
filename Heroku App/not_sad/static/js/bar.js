@@ -14,13 +14,13 @@ var family = [];
 var year = [];
 
 // Use d3 to read in current year dataset
-// d3.csv("clean_2019.csv").then(function(data) {
-d3.json("/api/year/2019").then(function(data) {
+d3.csv("../static/data/clean_2019.csv").then(function(data) {
+// d3.json("/api/year/2019").then(function(data) {
   console.log(data[0]);
 });
 
-// d3.csv("clean_2019.csv").then(function(data) {    
-d3.json("/api/year/2019").then(function(data) {   
+d3.csv("../static/data/clean_2019.csv").then(function(data) {    
+// d3.json("/api/year/2019").then(function(data) {   
   country = data.map(d => d[0]);
   happiness_rank =data.map(d => d[1]);
   happiness_score = data.map(d => d[2]);  
@@ -33,7 +33,7 @@ d3.json("/api/year/2019").then(function(data) {
   social_support = data.map(d => d[9]);
 
   plotcurr(year)
-})
+});
 
 // Plot new report format
 function plotcurr(year) {
@@ -255,7 +255,7 @@ function getYear() {
   console.log("event dropdown", input_yr);
 
   if (input_yr == '2019') {
-    d3.json("../api/year/2019").then(function(data) {   
+    d3.json("/api/year/2019").then(function(data) {   
       country = data.map(d => d[0]);
       happiness_rank =data.map(d => d[1]);
       happiness_score = data.map(d => d[2]);  
@@ -273,7 +273,7 @@ function getYear() {
   }
 
   else if (input_yr == '2018') {
-    d3.json("../api/year/2018").then(function(data) {   
+    d3.json("/api/year/2018").then(function(data) {   
       country = data.map(d => d[0]);
       happiness_rank =data.map(d => d[1]);
       happiness_score = data.map(d => d[2]);  
@@ -291,7 +291,7 @@ function getYear() {
   }
 
   else if (input_yr == '2017') {
-    d3.json("../api/year/2017").then(function(data) {   
+    d3.json("/api/year/2017").then(function(data) {   
       country = data.map(d => d[0]);
       happiness_rank =data.map(d => d[1]);
       happiness_score = data.map(d => d[2]);  
@@ -309,7 +309,7 @@ function getYear() {
   }
 
   else if (input_yr == '2016') {
-    d3.json("../api/year/2016").then(function(data) {   
+    d3.json("/api/year/2016").then(function(data) {   
       country = data.map(d => d[0]);
       happiness_rank =data.map(d => d[1]);
       happiness_score = data.map(d => d[2]);  
@@ -326,7 +326,7 @@ function getYear() {
     })
   }
   else if (input_yr == '2015') {
-    d3.json("../api/year/2015").then(function(data) {   
+    d3.json("/api/year/2015").then(function(data) {   
       country = data.map(d => d[0]);
       happiness_rank =data.map(d => d[1]);
       happiness_score = data.map(d => d[2]);  
