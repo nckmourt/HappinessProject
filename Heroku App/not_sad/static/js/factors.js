@@ -13,12 +13,12 @@ var happiness_rank  = [];
 
 
 // d3.csv("../static/data/clean_2019.csv").then(function(data) {
-d3.json("/api/year/2019").then(function(data) {
+d3.json("https://opposite-of-sadness.herokuapp.com/api/year/2019").then(function(data) {
   console.log(data[0]);
 });
 
-// d3.csv("../static/data/clean_2019.csv").then(function(data) {
-d3.json("/api/year/2019").then(function(data) {   
+d3.csv("../static/data/clean_2019.csv").then(function(data) {
+// d3.json("/api/year/2019").then(function(data) {   
   country = data.map(d => d[0]);
   happiness_rank =data.map(d => d[1]);
   happiness_score = data.map(d => d[2]);  
@@ -28,8 +28,8 @@ d3.json("/api/year/2019").then(function(data) {
   generosity = data.map(d => d[7]);
   government_corr = data.map(d => d[8]);
   social_support = data.map(d => d[9]);
-  
-  
+  console.log(data);
+});
   var gdp = {
       x: happiness_score,
       y: gdp_per_capita,
