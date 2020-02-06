@@ -37,7 +37,6 @@ d3.json("../api/year/2019").then(function(data) {
 
 // Plot new report format
 function plotcurr(year) {
-  console.log('plotdata');
   var gdp = {
     x: gdp_per_capita,
     y: country,
@@ -45,7 +44,7 @@ function plotcurr(year) {
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
@@ -57,7 +56,7 @@ function plotcurr(year) {
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
@@ -69,31 +68,31 @@ function plotcurr(year) {
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
 
-  var freedom = {
+  var free = {
     x: freedom,
     y: country,
     name: 'Freedom',
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
 
-  var generosity= {
+  var heart= {
     x: generosity,
     y: country,
     name: 'Generosity',
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
@@ -105,28 +104,32 @@ function plotcurr(year) {
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
 
   //small scale plot
-  var data = [gdp, support, life, corruption,freedom, generosity];
+  var data = [gdp, support, life, corruption,free, heart];
   
   var layout = {
     // paper_bgcolor: "rgba(0,0,0,0)",
-    title: '(scroll to see more)',
+    // title: '(scroll to see more)',
     barmode: 'stack',
     margin: {
-      l: 200,
-      r: 20,
+      l: 225,
+      r: 50,
       t: 35,
       b: 20
     },
-    // width: 480,
+    // width: 1380
     height: 2500,
     xaxis: {
-      range: [0, 10,]
+      range: [0, 6]
+    },
+    yaxis: {autorange:'reversed'
+    },
+    font: {size:18
     },
     options: {
       responsive: true,
@@ -136,9 +139,8 @@ function plotcurr(year) {
   Plotly.newPlot('rank', data, layout);
 };
 
-// Plot former report laytou
+// Plot former report laytout
 function plotold(year) {
-  console.log('plotdata');
   var gdp = {
     x: gdp_per_capita,
     y: country,
@@ -146,19 +148,19 @@ function plotold(year) {
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
 
-  var family = {
+  var fam = {
     x: family,
     y: country,
     name: 'Family',
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
@@ -170,31 +172,31 @@ function plotold(year) {
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
 
-  var freedom = {
+  var free = {
     x: freedom,
     y: country,
     name: 'Freedom',
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
 
-  var generosity= {
+  var heart= {
     x: generosity,
     y: country,
     name: 'Generosity',
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
@@ -206,28 +208,32 @@ function plotold(year) {
     orientation: 'h',
     marker: {
       color: 'Portland',
-      width: 1
+      width: 2
     },
     type: 'bar'
   };
 
  //small scale plot
-  var data = [gdp, family, life, corruption,freedom, generosity];
+  var data = [gdp, fam, life, corruption,free, heart];
   
   var layout = {
     // paper_bgcolor: "rgba(0,0,0,0)",
-    title: '(scroll to see more)',
+    // title: '(scroll to see more)',
     barmode: 'stack',
     margin: {
-      l: 200,
-      r: 20,
+      l: 225,
+      r: 50,
       t: 35,
       b: 20
     },
-    // width: 480,
+    // width: 1380,
     height: 2500,
     xaxis: {
-      range: [0, 10,]
+      range: [0, 6]
+    },
+    yaxis: {autorange:'reversed'
+    },
+    font: {size:18
     },
     options: {
       responsive: true,
@@ -246,8 +252,6 @@ function getYear() {
   var dropdownMenu = d3.select("#selYear");
   // Assign the value of the dropdown menu option to a variable
   var input_yr = dropdownMenu.property("value");
-  // Initialize an empty array for the country's data
-
   console.log("event dropdown", input_yr);
 
   if (input_yr == '2019') {
@@ -340,6 +344,4 @@ function getYear() {
   }
 }; 
   
-
-
 
