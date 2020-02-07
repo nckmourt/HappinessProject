@@ -1,120 +1,275 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Happiness Project</title>
 
-<head>
-  <meta charset="UTF-8">
-  <title>The Happiness Project</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-  <link rel="stylesheet" href="../static/css/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-<body>
-    <!-- create Nav Bar -->
-    <div class = "wrapper">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">The Happiness Project</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#">Home<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#map">Map Visualization</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#bar">Bar Chart</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#scatter">Scatter Plot</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="about.html">About Us</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </nav>
-
-    </div>
-
-    <div class= "content">
-        <!-- create header -->
-        <div class="jumbotron">
-            <div class="container">
-            <h1 class="display-4">the world happiness report</h1>
-            <p class="lead">what makes us happy? <br> understanding the factors used to measure happiness across the world and how those factors change over time.</p>
-            </div>
-        </div>
-    <!-- create different sections  -->
-        <div class="visuals">
-            <section id="map">
-                <div class="col-lg-12 col-md-5">
-                    <div class="container">
-                        <h1>2019 world happiness report results</h1>
-                        <div class="row">
-                            <div class="card mb-3">
-                                <img src="../static/images/map.png" class="card-img-top" alt="map visualization">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="bar">
-                <div class="col-lg-12 col-md-5">
-                    <div class="container">
-                        <h1>2019 world happiness report results</h1>
-                            <div class="row">
-                                <div class="card mb-3">
-                                    <img src="../static/images/bar.png" class="card-img-top" alt="bar chart visualization">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                </div>
-                            </div>          
-                    </div>
-                </div>
-            </section>
-        
-            <section id="scatter">
-                <div class="col-lg-12 col-md-5">
-                    <div class="container">
-                        <h1>2019 world happiness report results</h1>
-                        <div class="row">
-                            <div class="card mb-3">
-                                <img src="../static/images/scatter.png" class="card-img-top" alt="scatter plot visualization">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-            </section>
-
-        </div>
-
-    </div>
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+​
+    <!-- Leaflet CSS & JS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+​
+    <!-- Leaflet-Choropleth JavaScript -->
+    <script type="text/javascript" src="../static/js/choropleth.js"></script>
+​
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     
+  </head>
+  <body id="page-top">
+    <!-- create Nav Bar -->
+    <div class = "wrapper">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+          <div class="container">
+              <a class="navbar-brand js-scroll-trigger" href="#page-top">The Happiness Project</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" href="#">Home<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" href="#map">World Map</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#scatter">Factors Over Time</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#top">Top Ten</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" href="charts.html#factors">Factors</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" href="charts.html#rankings">World Rankings</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link js-scroll-trigger" href="process.html">About Us</a>
+                      </li>
+                  </ul>
+              </div>
+​
+          </div>
+      </nav>
+  </div>
+  <!-- create header -->
+  <div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">What Makes Us Happy?</h1>
+        <p class="lead">Exploring The World Happiness Report <br> Understanding the factors used to measure happiness across the world and how those factors change over time.</p>
+    </div>
+  </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="test.js"></script>
+    <!-- div with world map visualization -->
+    <h1>Global Happiness</h1>
+    <div id="map"></div>
+
+    <div class="card">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p> I feel that the American dream can be achieved best in the Nordic countries, where every child no matter their background or the background of their families can become anything.
+            </p>
+            <footer class="blockquote-footer">Sanna Marin, the 34-year-old prime minister of Finland, to the <cite title="Washington Post">Washington Post</cite></footer>
+          </blockquote>
+        </div>
+    </div>
+
+
+    <!-- div with scatter plot -->
+    <section id="scatter">
+        <h1>Factors' Impact on Happiness Over Time</h1>
+        <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+        <div class="card">
+            <div class="card-body">
+                The visualization shows the relationship between life expectancy and GDP per capita, and their combined effect on Happiness scores in an interactive time-adjustable interface. We can learn which countries have either suffered or prospered as a result of changes in GDP per capita and life expectancy, which is a variable that represents a combination of factors that contribute to quality of life, such as access to healthcare, crime rates, infant mortality, economic development, and improvement in environmental conditions.
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- div with top ten information -->
+    <div id="top">
+        <h1>Top 10 Happiest Countries</h1>
+        <p>based on 2019's World Happiness Report Data</p>
+        <hr>
+
+        <!-- <h3>2020 World Happiness Report</h3> -->
+        <p><a href="https://en.wikipedia.org/wiki/World_Happiness_Report">Wikipedia</a></p>
+        <br><br>
+
+        <!-- <-- Slideshow container --> 
+        <div class="slideshow-container">
+
+            <!-- Full-width slides/quotes  -->
+            <div class="Top10">
+                <h2 font-weight-bold>#1&nbsp; <img src="../static/images/finland.jpg" alt="Finland" style="width:10%" align="middle"> &nbsp;Finland</h2>
+                <p>Finland ranks first again. The country has an advanced economy and extensive welfare state, 
+                resulting in widespread prosperity and a high per capita income. Finland is a top performer in numerous metrics of national 
+                performance, including education, economic competitiveness, civil liberties, quality of life, and human development.</p>
+            </div>
+
+            <div class="Top10">
+                <h2 font-weight-bold> #2 &nbsp; <img src="../static/images/denmark.jpg" alt="Denmark" style="width:10%" align="middle"> &nbsp;Denmark</h2>
+                <p>Denmark up one spot from 2018. The country enjoys a high standard of living and ranks as having the world's 
+                highest social mobility, a high level of income equality, has the lowest perceived level of corruption in the world, has one 
+                of the world's highest per capita incomes, and one of the world's highest personal income tax rates.</p>
+            </div>
+
+            <div class="Top10">
+                <h2 font-weight-bold> #3&nbsp; <img src="../static/images/norway.png" alt="Norway" style="width:10%" align="middle"> &nbsp; Norway</h2>
+                <p>Norway down one spot from 2018. The country has a universal health care and a comprehensive social security 
+                system -- values are rooted in egalitarian ideals. Norway has the fourth-highest per capita income in the world on 
+                the World Bank list. Norway has had the highest Human Development Index ranking in the world since 2009.</p>
+            </div>
+
+            <div class="Top10">
+                <h2 font-weight-bold> #4&nbsp;&nbsp;<img src="../static/images/iceland.png" alt="Iceland" style="width:10%" align="middle"> &nbsp;Iceland</h2>
+                <p>Iceland holds 4th place again this year. The country has a market economy with relatively 
+                    low taxes. It maintains a welfare system that provides universal health care and tertiary education for its citizens. Iceland 
+                    ranks high in economic, democratic, social stability, and equality, currently ranking third in the world by median wealth per adult.</p>   
+            </div>
+            
+            <div class="Top10">
+                <h2 font-weight-bold> #5&nbsp;&nbsp;<img src="../static/images/netherlands.png" alt="Netherlands" style="width:10%" align="middle"> &nbsp; Netherlands</h2>
+                <p>The Netherlands up one spot from 2018. The country has a tradition of pillarisation and a record of 
+                    social tolerance. Its mixed-market advanced economy had the thirteenth-highest per capita income globally. The Netherlands 
+                    ranks among the highest in international indexes of press freedom, economic freedom, human development and quality of life</p>
+            </div>
+            
+            <div class="Top10">
+                <h2 font-weight-bold> #6&nbsp;<img src="../static/images/switzerland.png" alt="Switzerland" style="width:9%" align="middle"> &nbsp;Switzerland</h2>
+                <p>Switzerland down one spot from 2018. The sovereign state is one of the most developed countries in the world, 
+                    with the highest nominal wealth per adult and the eighth-highest per capita gross domestic product. It ranks at or near the top 
+                    in several international metrics, including economic competitiveness and human development.</p>
+            </div>
+
+            <div class="Top10"> 
+                <h2 font-weight-bold> #7&nbsp;<img src="../static/images/sweden.png" alt="Sweden" style="width:12%" align="middle">&nbsp;Sweden</h2>
+                <p>Sweden up two spots from 2018. The country provides universal health care and tertiary education for its 
+                    citizens. It has the world's eleventh-highest per capita income and ranks highly in quality of life, health, education, protection of 
+                    civil liberties, economic competitiveness, equality, gender equality, prosperity and human development.</p>
+            </div>
+
+            <div class="Top10">
+                <h2 font-weight-bold> #8&nbsp;<img src="../static/images/new-zealand.png" alt="New Zealand" style="width:15%" align="middle">&nbsp;New Zealand</h5>
+                <p>New Zealand maintained its position of 8th place again this year. A developed country, New Zealand 
+                    ranks highly in international comparisons of national performance, such as quality of life, health,
+                    education, protection of civil liberties, and economic freedom.</p>
+                </div>
+            
+                <div class="Top10">
+                    <h2 font-weight-bold>#9&nbsp; <img src="../static/images/canada.png" alt="Canada" style="width:12%" align="middle">&nbsp;Canada</h2>  
+                    <p>Canada down two spots from 2018. The country ranks among the highest in international measurements of 
+                    government transparency, civil liberties, quality of life, economic freedom, and education. It is one of the 
+                    world's most ethnically diverse and multicultural nations, the product of large-scale immigration from many other countries.</p>
+                </div>
+            
+                <div class="Top10">
+                    <h2 font-weight-bold> #10&nbsp; <img src="../static/images/Austria.png" alt="Austria" style="width:10%" align="middle">&nbsp;&nbsp;Austria</h2>
+                    <p> Austria up two spots from 2018. The country is a parliamentary representative democracy 
+                    with a directly elected Federal President. Major urban areas of Austria consistently rank in the top 20 richest countries in the world 
+                    by GDP per capita terms. In 2018, Austria was ranked 20th in the world for its Human Development Index.</p>
+                </div>
+            <!-- Next/prev buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- Dots/bullets/indicators -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+            <span class="dot" onclick="currentSlide(7)"></span> 
+            <span class="dot" onclick="currentSlide(8)"></span> 
+            <span class="dot" onclick="currentSlide(9)"></span> 
+            <span class="dot" onclick="currentSlide(10)"></span> 
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("Top10");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+        <div class="sh-content">
+            <br><br><h3> <img src="../static/images/usa.jpg" alt="usa" style="width:6%"> &nbsp; So... Where's the US?</h3>  
+            <p>The United States falls again, ranking #19. Why are Americans so unhappy...or aren't they?  Stay tuned for PROJECT 3 to find out! </p>
+        </div>
+    </div>
+
+</div>
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- add in scripts -->
+
+    <!-- <script type="text/javascript" src="../static/js/factors.js"></script> 
+    <script type="text/javascript" src="../static/js/plot.js"></script> -->
+
+    <script type="text/javascript" src="../static/js/config.js"></script>
+    <script type="text/javascript" src="../static/js/logic.js"></script>
+
+    <script type="text/javascript" src="../static/js/bubble.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+
 </body>
+</html>
