@@ -59,7 +59,7 @@ var countries = [
 var countryMarkers = [];
 
 for (var i = 0; i < countries.length; i++) {
-  // loop through the cities array, create a new marker, push it to the countryMarkers array
+  // loop through the countires array, create a new marker, push it to the countryMarkers array
   countryMarkers.push(
     L.marker(countries[i].location).bindPopup("<h1>" + countries[i].name + "</h1>" + "Happiness Rank: " + countries[i].happinessRank)
     );    
