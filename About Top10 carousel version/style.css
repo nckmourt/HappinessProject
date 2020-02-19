@@ -241,5 +241,8 @@ p3 {
 .sh-content {
   padding: 10px;
 }
-
 /* end of slide show stylying */
+
+.navbar .navbar-brand{
+                       color: white;
+                      }
