@@ -110,6 +110,14 @@ class Data_2019(db.Model):
 def home():
     return render_template("index.html")
 
+@app.route("/charts")
+def charts():
+    return render_template("charts.html")
+
+@app.route("/process")
+def process():
+    return render_template("process.html")
+
 # Query the database and send the jsonified results
 @app.route("/api/year/2015")
 def happy_2015():
