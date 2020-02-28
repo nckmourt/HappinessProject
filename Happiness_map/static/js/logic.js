@@ -141,7 +141,7 @@ d3.json(geoData, function(data) {
 
     // Binding a pop-up to each layer
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("<b> Country: " + feature.properties.country + "<br> Happiness Rank: " +
+      layer.bindPopup("<b> " + feature.properties.country + "<br> Happiness Rank: " +
         feature.properties.happiness_rank + "<br> Happiness Score: " +
         feature.properties.happiness_score);
     }
