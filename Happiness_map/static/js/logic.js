@@ -141,15 +141,9 @@ d3.json(geoData, function(data) {
 
     // Binding a pop-up to each layer
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("<b> Country: " + feature.properties.country + "Happiness Rank: " +
-        feature.properties.happiness_rank + "Happiness Score: " +
-        feature.properties.happiness_score + "GDP Per Capita: " +
-        feature.properties.gdp_per_capita + "Social Support: " +
-        feature.properties.social_support + "Life Expectancy: " +
-        feature.properties.life_expectancy + "Freedom: " +
-        feature.properties.freedom+ "Generosity: " +
-        feature.properties.generosity+ "Gov Corr: " +
-        feature.properties.government_corr);
+      layer.bindPopup("<b> Country: " + feature.properties.country + " Happiness Rank: " +
+        feature.properties.happiness_rank + " Happiness Score: " +
+        feature.properties.happiness_score);
     }
   }).addTo(myMap);
   
