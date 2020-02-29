@@ -255,17 +255,17 @@ d3.csv("/static/data/whd-2015-19.csv").then(function(data) {
 // Plot user select country charts 
 //=================================
 
-//plot rank line graph
+//plot rank bar
 
 function plotctry(myData) {
   //#1
   var ctry = {
     x: ctryData.map(a => a.year),
     y: ctryData.map(a => a.happiness_rank),
-    type: 'scatter', //'bar',
-    // marker: {
-    //   color: 'rgba(238, 229, 151, 0.952)'
-    // },
+    type: 'bar',
+    marker: {
+      color: 'rgba(238, 229, 151, 0.952)'
+    },
     text: ctryData.map(a => a.happiness_rank).map(String),
     textposition: 'auto',
     hovertemplate: []
@@ -283,11 +283,10 @@ function plotctry(myData) {
     barmode: 'group',
     yaxis: {
       title: 'Rank',
-      autorange:'reversed'
     },
     xaxis: {
       title: 'Year',
-      // autorange: 'reversed',
+      autorange: 'reversed',
     },
     height: 400, 
     // width: 700,
@@ -395,9 +394,9 @@ function plotctry(myData) {
       // pad: 10
     },
     height: 400,
-    xaxis: {
-      range: [0, 5],
-    },
+    // xaxis: {
+    //   range: [0, 5],
+    // },
     yaxis: {autorange:'reversed',
     title: 'Year',
     tickmode:'linear'
@@ -411,9 +410,7 @@ function plotctry(myData) {
     plot_bgcolor: "rgb(233, 243, 248)",
     paper_bgcolor: "rgb(233, 243, 248)",
     // showlegend: false,
-    legend: {"orientation": "h",
-          // autorange:'reversed'
-        }
+    legend: {"orientation": "h"}
   };
 
   config = {responsive: true}
