@@ -59,7 +59,7 @@ var countries = [
 var countryMarkers = [];
 
 for (var i = 0; i < countries.length; i++) {
-  // loop through the cities array, create a new marker, push it to the countryMarkers array
+  // loop through the countires array, create a new marker, push it to the countryMarkers array
   countryMarkers.push(
     L.marker(countries[i].location).bindPopup("<h1>" + countries[i].name + "</h1>" + "Happiness Rank: " + countries[i].happinessRank)
     );    
@@ -141,15 +141,9 @@ d3.json(geoData, function(data) {
 
     // Binding a pop-up to each layer
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("<b> Country: " + feature.properties.country + "<br>&#129351; Happiness Rank: " +
-        feature.properties.happiness_rank + "<br>&#128515; Happiness Score: " +
-        feature.properties.happiness_score + "<br>&#128178; GDP Per Capita: " +
-        feature.properties.gdp_per_capita + "<br>&#128106; Social Support: " +
-        feature.properties.social_support + "<br>&#128368; Life Expectancy: " +
-        feature.properties.life_expectancy + "<br>&#127480; Freedom: " +
-        feature.properties.freedom+ "<br>&#128147; Generosity: " +
-        feature.properties.generosity+ "<br>&#128706; Gov Corr: " +
-        feature.properties.government_corr);
+      layer.bindPopup("<b> Country: " + feature.properties.country + "<br> Happiness Rank: " +
+        feature.properties.happiness_rank + "<br> Happiness Score: " +
+        feature.properties.happiness_score);
     }
   }).addTo(myMap);
   
