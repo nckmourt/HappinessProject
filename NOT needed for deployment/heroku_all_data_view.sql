@@ -9,6 +9,7 @@
   	government_corr,
 	social_support,
 	continent,
+	population,
  	2015 as year
  from data_2015
 
@@ -25,6 +26,7 @@
   	government_corr,
 	social_support,
 	continent,
+	population,
  	2016 as year
  from data_2016
  
@@ -41,6 +43,7 @@
   	government_corr,
 	social_support,
 	continent,
+	population,
  	2017 as year
  from data_2017
  
@@ -57,6 +60,7 @@
   	government_corr,
 	social_support,
 	continent,
+	population,
  	2018 as year
  from data_2018
  
@@ -73,6 +77,7 @@
   	government_corr,
 	social_support,
 	continent,
+	population,
  	2019 as year
  from data_2019
 
