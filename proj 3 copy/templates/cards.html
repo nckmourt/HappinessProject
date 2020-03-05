@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Happiest Countries</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow"> -->
+        <link rel="stylesheet" href="../static/css/style.css">
+
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+       
+    </head>
+
+    <body>
+
+    <!-- create Nav Bar -->
+       
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+            <a class="navbar-brand js-scroll-trigger" href="index.html"> <img src="../static/images/happy.png" alt="happy" style="height:100%;display:inline-block;"></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html#page-top" class="nav-link js-scroll-trigger">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#world" class="nav-link js-scroll-trigger">Global Happiness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="slides.html#topten" class="nav-link js-scroll-trigger">Happiest Countries</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Explore the Factors</a>
+                        <div class="dropdown-menu">
+                            <a href="#factors" class="dropdown-item js-scroll-trigger">Factors and Happiness</a>
+                            <a href="#scatter" class="dropdown-item js-scroll-trigger">The Effect of Time</a>
+                            <a href="charts.html#country" class="dropdown-item js-scroll-trigger">My Country</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About Us</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="process.html" class="dropdown-item">Project</a>
+                            <a href="about.html" class="dropdown-item">Team</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- <div class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-5">
+                    <br><br> 
+                    <h1>Happy World.  Happy You?</h1>
+                    <br><br>
+                    <h2>Exploring the World Happiness Report  ...and why it matters.</h2>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    
+    
+     <!-- LOOK AT THE FACTORS -->
+     <div id=factors class="container-fluid content-row" style="text-align: center">
+        <br><br><br><br><br><br>
+        <h1 style="color:rgb(24, 3, 143); margin-left: 32px ;margin-right: 36px;">A Look at the Factors</h1>  
+        <br>
+        <h3 style="margin-left: 32px ;margin-right: 36px;">6 Factors Most Correlated with World Happiness</h3>
+        <br><br>
+    </div>
+
+
+   
+    <br><br><br>
+    <div class="container-fluid content-row" style="text-align: center">
+        <h4>SELECT A VIEW</h4> <br>
+        <select id="selData" style="font-size:17px; height: 40px; width:220px">
+            <option value="current">Most Current Year</option>
+            <option value="years">Past 5 Years</option>
+        </select>
+        <br><br><br>
+        <h4 style="text-align: center"> Top 10 Countries</h4>
+        
+    </div>
+
+    <br><br>
+    <div id=factors2 class="container-fluid content-row">
+        <br><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center">Happiness and GDP</h5>
+                        <div class="responsive-plot" id="plot1"></div>
+                        <p class="card-text">Gross Domestic Product (GDP) is the annual value of all goods and services a country produces. This number is normally calculated independently by country and by a national government statistical agency.</p>            
+                    </div>
+                </div>
+            </div> 
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center">Happiness and Family/Social Support<h5>
+                        <div class="responsive-plot" id="plot2"></div>
+                        <p class="card-text">Social Support is defined by the same survey results of the Gallup World Poll data. The average of all answers determines the outcome of this factor per country.</p>   
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center">Happiness and life Expectancy</h5>
+                        <div class="responsive-plot" id="plot3"></div>
+                        <p class="card-text">The estimate for Life Expectancy represents the average number of "healthy" years a child at birth is estimated to live. It's calculated by the World Health Organization (WHO) based on over 100 different health factors.</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center">Happiness and Freedom</h5>
+                        <div class="responsive-plot" id="plot4"></div>
+                        <p class="card-text">Freedom is based on the average response to the Gallup World Poll question: "Are you satisfied or dissatisfied with your freedom to choose what you do with your life?</p>  
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center">Happiness and Generosity</h5>
+                        <div class="responsive-plot" id="plot5"></div>
+                        <p class="card-text">Generosity is based on the response to the Gallup World Poll question: "Have you donated money to a charity in the past month?" </p> 
+                    </div>
+                </div>
+            </div> 
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center">Happiness and Government Corruption</h5> 
+                        <div class="responsive-plot" id="plot6"></div>
+                        <p class="card-text">Government Corruption is based on the average response to the following 2 questions: 1) "Is corruptionwidespread throughout the government?" and 2) "Is corruption widespread within businesses?".</p>           
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+    </div>
+
+    <hr>
+
+
+    <!-- div with scatter plot visualization : happiness scores change over time  -->
+    <section id="scatter">
+        <div class="content">
+            <br><br><br><br>
+            <h1 class="display-4" style="color:rgb(24, 3, 143); margin-left: 24px ;margin-right: 32px;">Perceptions of Happiness Over Time</h1>  
+            <br><br>
+            <h3 style="margin-left: 24px ;margin-right: 32px;">As the world advances, so does citizen perceptions of happiness.</h3>
+            <br><br>
+        </div> 
+        <div class="content">
+            <div class="row"></div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <div id="myDiv"> </div>  <!-- Plotly chart will be drawn inside this DIV -->  
+                    </div>  
+                </div>
+                <div class="col-md-5"></div>
+                    <div class="card-body">
+                        <p4>The visualization shows the relationship between life expectancy and GDP per capita, 
+                            and their combined effect on Happiness scores in an interactive time-adjustable interface. 
+                            We can learn which countries have either suffered or prospered as a result of changes in GDP 
+                            per capita and life expectancy, which is a variable that represents a combination of factors 
+                            that contribute to quality of life, such as access to healthcare, crime rates, infant mortality, 
+                            economic development, and improvement in environmental conditions.</p4>
+                        <br><br><br><br>
+                    </div>
+                </div>
+            </div> 
+        </div>
+     </section>
+
+
+
+     <!-- Bar chart of hi's, lows, and median ranking scores explained by the factors -->
+     <!-- to runs use the factor2.js-->
+     <!-- <div class="container-fluid content-row" style="text-align: center">
+        <br><br><br>
+        <h1 style="color:rgb(24, 3, 143); margin-left: 24px ;margin-right: 32px;">A Different Take On the Factors...</h1>  
+        <br>
+    </div>
+
+    <div id=factors3 class="container-fluid content-row">
+        <h1> <img src="../static/images/legend1.png" alt="legend" style="text-align: center"></h1>
+        <div class="row"> 
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div id="rankten"></div>
+                    </div>
+                </div>
+            </div>   
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div id="ranklow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <div class="card-body">   
+                        <div id="rankall"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <hr> -->
+
+             
+
+    <!-- user teasers to other pages -->
+    <hr>
+    <div class="content">
+        <br><br><br>
+        <h1 style="color:rgb(24, 3, 143); margin-left: 24px ;margin-right: 32px;">Explore the Factors</h1>  
+        <br>
+        <div class="container-fluid content-row">
+            <br><br>
+            <div class="row">
+                <div class="col-sm-4"></div> 
+                <div class="col-sm-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-title" style="text-align: center">Find Your Happiness Score</p>
+                            <img class=pix  src="../static/images/woman-falling-in-line-holding-each-other-1206059.jpg" alt="women" href="ml.html#predictor">
+                            <br>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-sm-4"></div>
+            </div>
+            <br><br><br><br>
+        </div>
+    </div>
+    <hr>
+   
+
+
+     
+
+    <footer class="py-5 bg-dark">
+        <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
+        </div>
+    </footer> 
+
+<!-- add in scripts -->
+
+  <script type="text/javascript" src="../static/js/cards.js"></script>
+  <script type="text/javascript" src="../static/js/bubble.js"></script>
+
+
+</body>
+</html>
+
