@@ -110,6 +110,10 @@ class Data_2019(db.Model):
 def home():
     return render_template("index.html")
 
+@app.route("/factors")
+def factors():
+    return render_template("factors.html")
+
 @app.route("/charts")
 def charts():
     return render_template("charts.html")
