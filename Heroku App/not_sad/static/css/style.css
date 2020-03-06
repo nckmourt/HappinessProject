@@ -1,37 +1,375 @@
+.navbar {
+    letter-spacing: 4px;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    font: "Barlow", serif; 
+}
+
 h1 {
     text-align: center;
     color: black; 
-    font-family: "Tangerine", serif;
+    font-family: "Barlow", serif;
 }
 p {
     text-align: center;
+    font-family: "Barlow", serif;
+}
+
+h3 {
+    text-align: center;
+    font-family: "Barlow", serif;
+}
+
+h4 {
+    text-align: center;
+    font-family: "Barlow", serif;
+}
+
+h5 {
+    text-align: center;
+    font-family: "Barlow", serif;
 }
 
 .jumbotron {
-    background-image: url(../images/balloons.jpeg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     margin-bottom: 0; 
 } 
 
-.content {
-    background-image: url(../images/balloons.jpeg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.about {
     margin-bottom: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    
+}
+#map,
+body,
+html {
+    height: 100%;
+}
+
+.leaflet-popup-content {
+    text-align: center;
+}
+
+/* CSS from the Leaflet-Choropleth documentation */
+.legend {
+    padding: 6px 8px;
+    font: 12px Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #555;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.legend ul {
+    padding: 0;
+    margin: 0;
+    clear: both;
+    list-style-type: none;
+}
+
+.legend li {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+}
+
+.legend .min {
+    float: left;
+    padding-bottom: 5px;
+}
+
+.legend .max {
+    float: right;
+}
+  
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+/* float: left; */
+display: block;
+background-color: transparent;
+width: 400px;
+height: 240px;
+border: 1px solid #f1f1f1;
+/* padding: 5px; */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+position: relative;
+width: 100%;
+height: 100%;
+/* text-align: center; */
+transition: transform 0.8s;
+transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+background-color: white;
+color: black;
+padding: 20px;
 
 }
 
-.about {
-    background-image: url(../images/balloons.jpeg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 0;
+/* Style the back side */
+.flip-box-back {
+background-color: dodgerblue;
+color: white;
+transform: rotateY(180deg);
+}
+/* End of flip box container  styling*/
+
+.box {
+min-height: 50px;
+padding: 5px;
+margin: 5px;
+font-weight: 800;
+color: #fff;
+}
+
+.skyblue {
+background: deepskyblue;
+}
+
+.purple {
+background: rebeccapurple;
+}
+
+.red {
+background: indianred;
+}
+.card {
+/* Add shadows to create the "card" effect */
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+padding: 2px 16px;
+}
+
+/* Styling added for Top10 portfolio layout */
+* {
+box-sizing: border-box;
+}
+
+body {
+background-color: #f1f1f1;
+padding: 20px;
+font-family: Arial;
+}
+
+/* Center website */
+.main {
+max-width: 1000px;
+margin: auto;
+}
+
+h1 {
+font-size: 50px;
+word-break: break-all;
+}
+
+p3 {
+font-size: 14px;
+}
+
+.row {
+margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+float: left;
+width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Content */
+.content {
+background-color: white;
+padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+.column {
+    width: 50%;
+}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column {
+    width: 100%;
+}
+}
+/* End of styling added for Top10 portfolio layout */
+
+/* slide show stylying */
+/* Slideshow container */
+.slideshow-container {
+position: relative;
+background: #f1f1f1f1;
+/* border: 1px solid gray; */
+box-shadow: 5px 10px 15px 10px #888888;
+width: 75%;
+margin: auto;
+/* width: 284px; */
+padding: 10px 10px 20px 10px;
+border: 1px solid #BFBFBF;
+/* background-color: white; */
+/* box-shadow: 10px 10px 5px #aaaaaa; */
+}
+
+#top {
+    margin-top: 100px;
+}
+
+/* Slides */
+.Top10 {
+display: none;
+padding: 80px;
+/* text-align: center; */
+background-color: white;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -30px;
+padding: 16px;
+color: rgb(155, 145, 145);
+font-weight: bold;
+font-size: 50px;
+border-radius: 0 3px 3px 0;
+/* user-select: none; */
+}
+
+/* Position the "next button" to the right */
+.next {
+position: absolute;
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+/* background-color: rgba(0,0,0,0.8); */
+background: rgb(182, 181, 181);
+color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+text-align: center;
+padding: 20px;
+/* background: #ddd; */
+/* background: rgb(44, 44, 44);; */
+width: 75%;
+margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+/* background: rgb(18, 18, 19); */
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+/* q {font-style: italic;} */
+
+/* Content */
+.sh-content {
+padding: 10px;
+}
+
+/* end of slide show styling */
+
+.box {
+    min-height: 50px;
+    padding: 5px;
+    margin: 5px;
+    font-weight: 800;
+    color: #fff;
+  }
+  
+.skyblue {
+background: deepskyblue;
+}
+
+.purple {
+background: rebeccapurple;
+}
+
+.red {
+background: indianred;
+}
+.card {
+/* Add shadows to create the "card" effect */
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+padding: 2px 16px;
 }
 
