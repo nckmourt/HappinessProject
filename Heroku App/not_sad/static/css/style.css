@@ -8,7 +8,17 @@
 
 h1 {
     text-align: center;
-    color: black; 
+    background-image: linear-gradient(to left, violet, indigo, blue, green, rgb(201, 201, 4), orange, red);   -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Barlow", serif;
+}
+
+.display-2 {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, rgb(201, 201, 4), orange, red);   -webkit-background-clip: text;
+    color: transparent;
+}
+.lead {
+    text-align: center; 
     font-family: "Barlow", serif;
 }
 p {
@@ -57,7 +67,7 @@ html {
 /* CSS from the Leaflet-Choropleth documentation */
 .legend {
     padding: 6px 8px;
-    font: 12px Arial, Helvetica, sans-serif;
+    font-family: "Barlow", serif;
     font-weight: bold;
     color: #555;
     background: #fff;
