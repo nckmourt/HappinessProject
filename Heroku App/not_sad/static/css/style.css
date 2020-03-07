@@ -3,42 +3,50 @@
     line-height: 25px;
     text-transform: uppercase;
     margin-bottom: 0px;
-    font: "Barlow", serif; 
+    font: "Poppins", serif; 
 }
 
 h1 {
     text-align: center;
     background-image: linear-gradient(to left, violet, indigo, blue, green, rgb(201, 201, 4), orange, red);   -webkit-background-clip: text;
     color: transparent;
-    font-family: "Barlow", serif;
+    font-family: "Poppins", serif;
 }
 
 .display-2 {
     background-image: linear-gradient(to left, violet, indigo, blue, green, rgb(201, 201, 4), orange, red);   -webkit-background-clip: text;
     color: transparent;
+    font-family: "Poppins", serif; 
+}
+
+.display-4 {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, rgb(201, 201, 4), orange, red);   -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Poppins", serif; 
 }
 .lead {
     text-align: center; 
-    font-family: "Barlow", serif;
+    font-family: "Poppins", serif;
 }
 p {
     text-align: center;
-    font-family: "Barlow", serif;
+    font-family: "Poppins", serif;
+    font-size: 20;
 }
 
 h3 {
     text-align: center;
-    font-family: "Barlow", serif;
+    font-family: "Poppins", serif;
 }
 
 h4 {
     text-align: center;
-    font-family: "Barlow", serif;
+    font-family: "Poppins", serif;
 }
 
 h5 {
     text-align: center;
-    font-family: "Barlow", serif;
+    font-family: "Poppins", serif;
 }
 
 .jumbotron {
@@ -67,9 +75,11 @@ html {
 /* CSS from the Leaflet-Choropleth documentation */
 .legend {
     padding: 6px 8px;
-    font-family: "Barlow", serif;
+    font-family: "Poppins", serif;
     font-weight: bold;
+    text-align: left;
     color: #555;
+    font-size: large;
     background: #fff;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
@@ -191,7 +201,7 @@ box-sizing: border-box;
 body {
 background-color: #f1f1f1;
 padding: 20px;
-font-family: Arial;
+font-family: "Poppins", serif;
 }
 
 /* Center website */
@@ -200,14 +210,14 @@ max-width: 1000px;
 margin: auto;
 }
 
-h1 {
+/* h1 {
 font-size: 50px;
 word-break: break-all;
-}
+} */
 
-p3 {
+/* p3 {
 font-size: 14px;
-}
+} */
 
 .row {
 margin: 8px -16px;
@@ -270,7 +280,7 @@ border: 1px solid #BFBFBF;
 }
 
 #top {
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 /* Slides */
@@ -291,6 +301,7 @@ margin-top: -30px;
 padding: 16px;
 color: rgb(155, 145, 145);
 font-weight: bold;
+font-family: "Poppins", serif;
 font-size: 50px;
 border-radius: 0 3px 3px 0;
 /* user-select: none; */
@@ -352,6 +363,7 @@ padding: 10px;
     min-height: 50px;
     padding: 5px;
     margin: 5px;
+    font-family: "Poppins", serif;
     font-weight: 800;
     color: #fff;
   }

@@ -4,72 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Informational Visuals</title>
+    <title>Happiest Countries</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://d3js.org/d3.v5.min.js"></script>
     
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="../static/css/style.css">
-
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    
 </head>
-<body>
-<!-- create Nav Bar -->
 <body style="background-color: whitesmoke">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <a class="navbar-brand" href="#">Navigation</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="charts">Country Rankings</a>
-            <a class="nav-item nav-link" href="factors">Factors</a>
-            <a class="nav-item nav-link disabled" href="process" tabindex="-1" aria-disabled="true">About Us</a>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="charts">Countries</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Factors
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="factors">Factors</a>
+                <a class="dropdown-item" href="#">Machine Learning</a>
+                <a class="dropdown-item" href="#">Tableau</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="process">About Us</a>
+              </li>
+          </ul>
         </div>
     </nav>
-
-   <!-- FACTOR BAR CHART ALL COUNTRIES -->
-   <!-- <div class="container">
-       <div class = "row">      
-            <div class="col-md-12">
-                <div id=bar class="container-fluid content-row" style="text-align: center">
-                    <br><br><br>
-                    <h1>Countries by Happiness Score</h1> 
-                    <div class="container-fluid content-row" style="text-align: center">
-                        <h4>SELECT A YEAR</h4> <br>
-                        <select id="selYear">
-                            <option value="2019">2019</option>
-                            <option value="2018">2018</option>
-                            <option value="2017">2017</option>
-                            <option value="2016">2016</option>
-                            <option value="2015">2015</option> 
-                        </select>
-                        <br><br><br>
-                    </div>
-                </div>
-                <p style="text-align: center">(scroll to see more)</p>   
-                <br>
-                <div class="plotbox" id="rank" style="overflow-y: scroll; height:400px; width: auto; outline: lightskyblue"></div>
-            </div>
-        </div>
-   </div> -->
-    
-    <!-- my country bar chart -->
+    <!-- choose my country line/bar chart -->
     <br><br><br>
     <div id=user class="container-fluid content-row" style="text-align: center">
-        <h1> Measuring Happiness</h1>
+        <h1 class="display-4"> Measuring Happiness</h1>
         <hr>
-        <h4>Choose Country </h4> <br>
+        <p>Choose Country </p>
         <select id="selCtry">
             <option value="none">(none)</option>
             <option value="Afghanistan">Afghanistan</option>
@@ -257,7 +235,7 @@
             <option value="Qatar">Qatar</option>
             <!-- <option value="Reunion">Reunion</option> -->
             <option value="Romania">Romania</option>
-            <option value="Russia">Russian</option>
+            <option value="Russia">Russia</option>
             <option value="Rwanda">Rwanda</option>
             <!-- <option value="Saint Helena">Saint Helena</option>
             <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
@@ -325,7 +303,6 @@
         </select>
     </div>
 
-    <!-- <br><br><br><br><br><br> -->
     <div id=user2 class="container-fluid content-row">
         <div class="row"> 
             <div class="col-md-8 col-sm-12">
@@ -343,7 +320,6 @@
                 </div>
             </div>
         </div>
-        <!-- <br><br><br><br><br> -->
     </div>
    
     <!-- div with top ten information -->
@@ -352,10 +328,10 @@
             <div row="row">
                 <div class="col-md-12">
                     <h1>Top 10 Happiest Countries</h1>
-                    <p>based on 2019's World Happiness Report Data</p>
                     <hr>
+                    <h4>Based on 2019's World Happiness Report Data</h4>
                     <p><a href="https://en.wikipedia.org/wiki/World_Happiness_Report">Wikipedia</a></p>
-                    <br><br>
+                    <br>
 
                     <!-- <-- Slideshow container --> 
                     <div class="slideshow-container">
@@ -477,15 +453,9 @@
                                 dots[slideIndex-1].className += " active";
                         }
                     </script>
-
-                    <!-- <div class="sh-content">
-                        <br><br><h3> <img src="../static/images/usa.jpg" alt="usa" style="width:6%"> &nbsp; So... Where's the US?</h3>  
-                        <p>The United States falls again, ranking #19. Why are Americans so unhappy...or aren't they?  Stay tuned for PROJECT 3 to find out! </p>
-                    </div> -->
                 </div>
             </div>
         </div>
-    </div>
     </div>
    
     <!-- Footer -->
@@ -497,23 +467,23 @@
 
 <!-- add in scripts -->
 
-    <script type="text/javascript" src="../static/js/selcountry.js"></script>
-    <script type="text/javascript" src="../static/js/bar.js"></script>
+<script type="text/javascript" src="../static/js/selcountry.js"></script>
+<script type="text/javascript" src="../static/js/bar.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <script>
-        const dd = document.getElementById("selCtry");
-        dd.selectedIndex = 1;
-        updatePlotly();
-    </script>
+<script>
+    const dd = document.getElementById("selCtry");
+    dd.selectedIndex = 1;
+    updatePlotly();
+</script>
 
 
 </body>

@@ -67,7 +67,6 @@ var myData = [];
 // d3.json("../api/year/2019").then(function(data) {
 // d3.csv("../data/whd-2015-19.csv").then(function(data) {
 
-
   d3.csv("/static/data/whd-2015-19.csv").then(function(data) {
     console.log(data[0]);
   });
@@ -86,7 +85,6 @@ var myData = [];
     v_continent = data.map(d => d.continent);
     v_year = data.map(d => d.year);
 
-  
   //concatenate data values renamed over time and remove null values
   v_support = v_social.concat(v_family);
   re_support = v_support.filter(function (el) {
@@ -157,7 +155,7 @@ function plotfact(currFac1) {
   var factor1 = [gdp];
 
   var layout = {   
-    // title: 'Happiness and GDP',
+    title: 'Happiness v GDP',
     yaxis: {
       title: 'GDP per Capita',
       range: [0, 2],
@@ -194,7 +192,7 @@ function plotfact(currFac1) {
   var factor2 = [support];
 
   var layout2 = {
-    // title: 'Happiness and Social Support (2018-)',
+    title: 'Happiness v Social Support',
     yaxis: {
       title: 'Social Support',
       range: [0, 2],
@@ -229,9 +227,9 @@ function plotfact(currFac1) {
   var factor3 = [life];
 
   var layout3 = {
-    // title: 'Happiness and Life Expectancy',
+    title: 'Happiness v Life Expectancy',
     yaxis: {
-      title: 'life Expectancy',
+      title: 'Life Expectancy',
       range: [0, 2],
     },
     xaxis: {
@@ -266,7 +264,7 @@ function plotfact(currFac1) {
   var factor4 = [freedom];
 
   var layout4 = {
-    // title: 'Happiness and Freedom',
+    title: 'Happiness v Freedom',
     yaxis: {
       title: 'Freedom',
       range: [0, 2],
@@ -303,7 +301,7 @@ function plotfact(currFac1) {
   var factor5 = [generosity];
 
   var layout5 = {
-    // title: 'Happiness and Generosity',
+    title: 'Happiness v Generosity',
     yaxis: {
       title: 'Generosity',
       range: [0, 2],
@@ -340,10 +338,10 @@ function plotfact(currFac1) {
   var factor6 = [corruption];
 
   var layout6 = {
-  // title: 'Happiness and Government Corruption',
+  title: 'Happiness v Government Corruption',
     yaxis: {
       title: 'Government Corruption',
-      // range: [0, 2],
+      range: [0, 2],
     },
     xaxis: {
       title: 'Happiness Score',
@@ -383,7 +381,7 @@ function plotfact2(allFac1) {
   var fall1 = [gdp];
 
   var layout1 = {   
-  // title: 'Happiness and GDP',
+  title: 'Happiness v GDP',
   yaxis: {
     title: 'GDP per Capita',
     range: [-1, 2],
@@ -417,7 +415,7 @@ function plotfact2(allFac1) {
   var fall2 = [support];
 
   var layout2 = {
-  // title: 'Happiness and Social Support (2018-)',
+  title: 'Happiness v Social Support',
   yaxis: {
     title: 'Support',
     range: [-1, 2],
@@ -451,7 +449,7 @@ function plotfact2(allFac1) {
   var fall3 = [life];
 
   var layout3 = {
-  // title: 'Happiness and Life Expectancy',
+  title: 'Happiness v Life Expectancy',
   yaxis: {
     title: 'Life Expectancy',
     range: [-1, 2],
@@ -485,7 +483,7 @@ function plotfact2(allFac1) {
   var fall4 = [freedom];
 
   var layout4= {
-  // title: 'Happiness and Freedom',
+  title: 'Happiness v Freedom',
   yaxis: {
     title: 'Freedom',
     range: [-1, 2],
@@ -519,7 +517,7 @@ function plotfact2(allFac1) {
   var fall5 = [generosity];
 
   var layout5 = {
-  // title: 'Happiness and Generosity',
+  title: 'Happiness v Generosity',
   yaxis: {
     title: 'Generosity',
     range: [-1, 2],
@@ -553,7 +551,7 @@ function plotfact2(allFac1) {
   var fall6 = [corruption];
 
   var layout6 = {
-  // title: 'Happiness and Government Corruption',
+  title: 'Happiness v Government Corruption',
   yaxis: {
     title: 'Government Corruption',
     range: [-1, 2],
