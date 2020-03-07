@@ -1,65 +1,59 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Happiness Project</title>
+    <title>About Us</title>
 
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="../static/css/style.css">
+ 
+</head>
 
-    <!-- d3 JavaScript -->
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-​
-    <!-- Leaflet-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
-    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-    crossorigin=""></script>
-​
-    <!-- Leaflet-Choropleth JavaScript -->
-    <script type="text/javascript" src="../static/js/choropleth.js"></script>
-​
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
-    <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-
-  </head>
-
-  <body style="background-color: whitesmoke">
+<body style="background-color: whitesmoke">
+    <!-- create Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <a class="navbar-brand" href="#">Navigation</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="charts">Country Rankings</a>
-            <a class="nav-item nav-link" href="factors">Factors</a>
-            <a class="nav-item nav-link disabled" href="process" tabindex="-1" aria-disabled="true">About Us</a>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="charts">Countries</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Factors
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="factors">Factors</a>
+                <a class="dropdown-item" href="#">Machine Learning</a>
+                <a class="dropdown-item" href="#">Tableau</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="process">About Us</a>
+              </li>
+          </ul>
         </div>
     </nav>
-    <!-- create header for the page -->
-    <div class ="container">
-        <div class ="row">
-            <div class="col-md-12">
-                <div class= "about">
-                    <div class="jumbotron jumbotron-fluid">
-                        <div class="container">
-                            <h1 class="display-4">about us</h1>
-                            <p class="lead">an in-depth view of our process: <br> what worked and what didn't</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <!-- create header -->
+    <br><br><br>
+    <div id=user class="container-fluid content-row" style="text-align: center">
+        <h1 class="display-2">About Us</h1>
+        <hr>
+        <p class="lead">an in-depth view of our process: <br> what worked and what didn't</p>
     </div>
+    
     <!-- create section with process information -->
     <div class="accordion" id="accordionExample">
         <div class="card">
@@ -227,15 +221,19 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
+    <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
     </div>
 </footer>
 
 <!-- add in scripts -->
 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html> 
    

@@ -156,7 +156,7 @@ d3.json(geoData, function(data) {
     var labels = [];
 
     // Add min & max
-    var legendInfo = "<h1>Happiness Rank</h1>" +
+    var legendInfo = "<h2>Happiness Rank</h2>" +
       "<div class=\"labels\">" +
         "<div class=\"min\">" + limits[0] + "</div>" +
         "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
