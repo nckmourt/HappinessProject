@@ -1,5 +1,3 @@
-//  python -m http.server
-
 // Define variables
 var happiness_score = [];
 var gdp_per_capita  = [];
@@ -37,85 +35,100 @@ d3.json("/api/year/2019").then(function(data) {
 
 // Plot new report format
 function plotcurr(data) {
-  var gdp = {
-    x: gdp_per_capita,
-    y: country,
-    name: 'GDP',
-    orientation: 'h',
+  var score = {
+    x: country,
+    y: happiness_score,
+    name: 'Happiness Score',
+    // orientation: 'h',
     marker: {
-      color: 'Portland',
+      // color: 'Portland',
       width: 2
     },
+    bargap: 1, 
     type: 'bar'
   };
 
-  var support = {
-    x: social_support,
-    y: country,
-    name: 'Social Support',
-    orientation: 'h',
-    marker: {
-      color: 'Portland',
-      width: 2
-    },
-    type: 'bar'
-  };
+// function plotcurr(data) {
+//   var gdp = {
+//     x: gdp_per_capita,
+//     y: country,
+//     name: 'GDP',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
 
-  var life = {
-    x: life_expectancy,
-    y: country,
-    name: 'Life Expectancy',
-    orientation: 'h',
-    marker: {
-      color: 'Portland',
-      width: 2
-    },
-    type: 'bar'
-  };
+//   var support = {
+//     x: social_support,
+//     y: country,
+//     name: 'Social Support',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
 
-  var free = {
-    x: freedom,
-    y: country,
-    name: 'Freedom',
-    orientation: 'h',
-    marker: {
-      color: 'Portland',
-      width: 2
-    },
-    type: 'bar'
-  };
+//   var life = {
+//     x: life_expectancy,
+//     y: country,
+//     name: 'Life Expectancy',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
 
-  var heart= {
-    x: generosity,
-    y: country,
-    name: 'Generosity',
-    orientation: 'h',
-    marker: {
-      color: 'Portland',
-      width: 2
-    },
-    type: 'bar'
-  };
+//   var free = {
+//     x: freedom,
+//     y: country,
+//     name: 'Freedom',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
 
-  var corruption = {
-    x: government_corr,
-    y: country,
-    name: 'Government Corruption',
-    orientation: 'h',
-    marker: {
-      color: 'Portland',
-      width: 2
-    },
-    type: 'bar'
-  };
+//   var heart= {
+//     x: generosity,
+//     y: country,
+//     name: 'Generosity',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
+
+//   var corruption = {
+//     x: government_corr,
+//     y: country,
+//     name: 'Government Corruption',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
 
   //small scale plot
-  var data = [gdp, support, life, corruption,free, heart];
+  // var data = [gdp, support, life, corruption,free, heart];
+  var data =[score]
   
   var layout = {
     // paper_bgcolor: "rgba(0,0,0,0)",
     // title: '(scroll to see more)',
-    barmode: 'stack',
+    // barmode: 'stack',
     margin: {
       l: 225,
       r: 50,
@@ -123,12 +136,16 @@ function plotcurr(data) {
       b: 20
     },
     // width: 1380
-    height: 2500,
+    // height: 2500,
+    yaxis: {
+      range: [0, 9], 
+      title: "Happiness Score"
+    },
+    // yaxis: {autorange:'reversed'
+    // },
     xaxis: {
-      range: [0, 6]
-    },
-    yaxis: {autorange:'reversed'
-    },
+      title: "Country"
+    }, 
     font: {size:18
     },
     options: {
@@ -139,100 +156,120 @@ function plotcurr(data) {
   Plotly.newPlot('rank', data, layout);
 };
 
-// Plot former report laytout
+// Plot former report layout
 function plotold(year) {
-  var gdp = {
-    x: gdp_per_capita,
-    y: country,
-    name: 'GDP',
-    orientation: 'h',
+  var score = {
+    x: country,
+    y: happiness_score,
+    name: 'Happiness Score',
+    // orientation: 'h',
     marker: {
-      color: 'Portland',
+      // color: 'Portland',
       width: 2
     },
+    bargap: 1,
     type: 'bar'
   };
 
-  var fam = {
-    x: family,
-    y: country,
-    name: 'Family',
-    orientation: 'h',
-    marker: {
-      color: 'Portland',
-      width: 2
-    },
-    type: 'bar'
-  };
+// function plotcurr(data) {
+//   var gdp = {
+//     x: gdp_per_capita,
+//     y: country,
+//     name: 'GDP',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//  
 
-  var life = {
-    x: life_expectancy,
-    y: country,
-    name: 'Life Expectancy',
-    orientation: 'h',
-    marker: {
-      color: 'Portland',
-      width: 2
-    },
-    type: 'bar'
-  };
+//   var fam = {
+//     x: family,
+//     y: country,
+//     name: 'Family',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
 
-  var free = {
-    x: freedom,
-    y: country,
-    name: 'Freedom',
-    orientation: 'h',
-    marker: {
-      color: 'Portland',
-      width: 2
-    },
-    type: 'bar'
-  };
+//   var life = {
+//     x: life_expectancy,
+//     y: country,
+//     name: 'Life Expectancy',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
 
-  var heart= {
-    x: generosity,
-    y: country,
-    name: 'Generosity',
-    orientation: 'h',
-    marker: {
-      color: 'Portland',
-      width: 2
-    },
-    type: 'bar'
-  };
+//   var free = {
+//     x: freedom,
+//     y: country,
+//     name: 'Freedom',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
 
-  var corruption = {
-    x: government_corr,
-    y: country,
-    name: 'Government Corruption',
-    orientation: 'h',
-    marker: {
-      color: 'Portland',
-      width: 2
-    },
-    type: 'bar'
-  };
+//   var heart= {
+//     x: generosity,
+//     y: country,
+//     name: 'Generosity',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
 
- //small scale plot
-  var data = [gdp, fam, life, corruption,free, heart];
+//   var corruption = {
+//     x: government_corr,
+//     y: country,
+//     name: 'Government Corruption',
+//     orientation: 'h',
+//     marker: {
+//       color: 'Portland',
+//       width: 2
+//     },
+//     type: 'bar'
+//   };
+
+//  //small scale plot
+//   var data = [gdp, fam, life, corruption,free, heart];
+  
+var data =[score]
   
   var layout = {
     // paper_bgcolor: "rgba(0,0,0,0)",
     // title: '(scroll to see more)',
-    barmode: 'stack',
+    // barmode: 'stack',
     margin: {
       l: 225,
       r: 50,
       t: 35,
       b: 20
     },
-    // width: 1380,
-    height: 2500,
+    // width: 1380
+    // height: 2500,
+    yaxis: {
+      range: [0, 9], 
+      title: "Happiness Score"
+    },
+    // yaxis: {autorange:'reversed'
+    // },
     xaxis: {
-      range: [0, 6]
-    },
-    yaxis: {autorange:'reversed'
-    },
+      title: "Country"
+    }, 
     font: {size:18
     },
     options: {
@@ -240,7 +277,6 @@ function plotold(year) {
       maintainAspectRatio: false
     }
   };
-  
   Plotly.newPlot('rank', data, layout);
 };
 
@@ -345,4 +381,3 @@ function getYear() {
   }
 }; 
   
-

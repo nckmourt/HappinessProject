@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Six Factors</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+</head>
+
+<body style="background-color: whitesmoke"> 
+<!-- create Nav Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <!-- <a class="navbar-brand" href="#">Navigation</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="charts">Countries</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Factors
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="factors">Factors</a>
+            <a class="dropdown-item" href="#">Machine Learning</a>
+            <a class="dropdown-item" href="#">Tableau</a>
+          </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="predict">Quiz</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="process">About Us</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<!-- LOOK AT THE FACTORS -->
+    <br><br><br>
+    <div class="container-fluid">
+        <div class = "row">
+            <div class="col-md-12">
+                <div id=factors class="container-fluid content-row" style="text-align: center">
+                    <h1 class="display-4">A Look at the Factors</h1>  
+                    <hr>
+                    <h3>Factors' Correlation with World Happiness</h3>
+                    <br>
+                </div>
+
+                <div class="container-fluid content-row" style="text-align: center">
+                    <p>Select a view</p> <br>
+                    <select id="selData">
+                        <option value="current">Most Current Year</option>
+                        <option value="years">Past 5 Years</option>
+                    </select>
+                <!-- <h4 style="text-align: center"> Top 10 Countries</h4> -->    
+                </div>
+
+                <div id=factors2 class="container-fluid content-row">
+                    <br><br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title" style="text-align: center">Happiness and GDP</h5> -->
+                                    <div class="responsive-plot" id="plot1"></div>
+                                    <p class="card-text" style = "font-size: medium">Gross Domestic Product (GDP) is the annual value of all goods and services a country produces. Each country independently calculates this number, normally with assistance from a national government statistical agency.</p>            
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-sm-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title" style="text-align: center">Happiness and Social Support<h5> -->
+                                    <div class="responsive-plot" id="plot2"></div>
+                                    <p class="card-text" style = "font-size: medium">The same survey results of the Gallup World Poll defines Social Support. The average of all survey answers determines the outcome of this factor for each country.</p>   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title" style="text-align: center">Happiness and Life Expectancy</h5> -->
+                                    <div class="responsive-plot" id="plot3"></div>
+                                    <p class="card-text" style = "font-size: medium">The estimate for Life Expectancy represents the average number of "healthy" years a child at birth is estimated to live. The World Health Organization (WHO) calculates this based on over 100 different health factors.</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title" style="text-align: center">Happiness and Freedom</h5> -->
+                                    <div class="responsive-plot" id="plot4"></div>
+                                    <p class="card-text" style = "font-size: medium">Freedom is based on the average response to the Gallup World Poll question: "Are you satisfied or dissatisfied with your freedom to choose what you do with your life?"</p>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title" style="text-align: center">Happiness and Generosity</h5> -->
+                                    <div class="responsive-plot" id="plot5"></div>
+                                    <p class="card-text" style = "font-size: medium">Generosity is based on the response to the Gallup World Poll question: "Have you donated money to a charity in the past month?" </p> 
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-sm-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title" style="text-align: center">Happiness and Government Corruption</h5>  -->
+                                    <div class="responsive-plot" id="plot6"></div>
+                                    <p class="card-text" style = "font-size: medium">Government Corruption is based on the average response to the following 2 questions: 1) "Is corruption widespread throughout the government?" and 2) "Is corruption widespread within businesses?"</p>           
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- div with scatter plot visualization : happiness scores change over time  -->
+    <div class ="container">
+        <div class = "row">
+            <div class = "col-md-12">
+                <h1> Perceptions of Happiness</h1>
+                <hr>
+                <h4>As the world advances, so do citizens' perceptions of happiness</h4> 
+            </div>
+        </div>
+    </div>
+    <div class = "container">
+        <div class = "row">
+            <div id="myDiv" style= "text-align: center; height: 500px; width: 950px"></div><!-- Plotly chart will be drawn inside this DIV -->  
+        </div>
+    </div>
+
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-md-12">
+                <div class = "card-body">
+                    <p>The visualization shows the relationship between life expectancy and GDP per capita, 
+                        and their combined effect on Happiness scores in an interactive time-adjustable interface. 
+                        We can learn which countries have either suffered or prospered as a result of changes in GDP 
+                        per capita and life expectancy, which is a variable that represents a combination of factors 
+                        that contribute to quality of life, such as access to healthcare, crime rates, infant mortality, 
+                        economic development, and improvement in environmental conditions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
+    </div>
+</footer> 
+
+<!-- add in scripts -->
+
+<script type="text/javascript" src="../static/js/factors.js"></script>
+<script type="text/javascript" src="../static/js/bubble.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+</body>
+</html>
+

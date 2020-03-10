@@ -1,63 +1,59 @@
-!DOCTYPE html>
-<html lang="en-us">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>About Us</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
-  <link rel="stylesheet" href="../static/css/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="../static/css/style.css">
+ 
 </head>
 
-<body id="page-top">
-<!-- create Nav Bar -->
-    <div class = "wrapper">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">The Happiness Project</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="index">Home<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="index">World Map</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="index">Factors Over Time</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="index">Top Ten</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="chart">Factors</a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="charts">World Rankings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="about">About Us</a>
-                        </li>
-                    </ul>
-                </div>
-    ​
-            </div>
-        </nav>
-    </div>
-    <!-- create header for the page -->
-    <div class= "about">
-        <div class="jumbotron">
-            <div class="container">
-            <h1 class="display-4">about us</h1>
-            <p class="lead">an in-depth view of our process: <br> what worked and what didn't</p>
-            </div>
+<body style="background-color: whitesmoke">
+    <!-- create Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <!-- <a class="navbar-brand" href="#">Navigation</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="charts">Countries</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Factors
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="factors">Factors</a>
+                <a class="dropdown-item" href="#">Machine Learning</a>
+                <a class="dropdown-item" href="#">Tableau</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="process">About Us</a>
+              </li>
+          </ul>
         </div>
+    </nav>
+
+    <!-- create header -->
+    <br><br><br>
+    <div id=user class="container-fluid content-row" style="text-align: center">
+        <h1 class="display-2">About Us</h1>
+        <hr>
+        <p class="lead">an in-depth view of our process: <br> what worked and what didn't</p>
+    </div>
+    
     <!-- create section with process information -->
     <div class="accordion" id="accordionExample">
         <div class="card">
@@ -225,16 +221,19 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
+    <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
     </div>
-    <!-- /.container -->
 </footer>
 
 <!-- add in scripts -->
 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html> 
    

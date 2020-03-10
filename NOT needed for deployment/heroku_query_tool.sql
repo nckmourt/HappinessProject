@@ -10,6 +10,7 @@ CREATE TABLE data_2015 (
  	government_corr FLOAT,
 	social_support FLOAT,
 	continent VARCHAR(40)           NOT NULL,
+	population FLOAT                NOT NULL,
  	PRIMARY KEY (country)
  );
 
@@ -25,6 +26,7 @@ CREATE TABLE data_2016(
  	government_corr FLOAT,
 	social_support FLOAT,
 	continent VARCHAR(40)           NOT NULL,
+	population FLOAT                NOT NULL,
  	PRIMARY KEY (country)
  );
 
@@ -40,6 +42,7 @@ CREATE TABLE data_2017(
  	government_corr FLOAT,
 	social_support FLOAT,
 	continent VARCHAR(40)           NOT NULL,
+	population FLOAT                NOT NULL,
  	PRIMARY KEY (country)
  );
  
@@ -55,6 +58,7 @@ CREATE TABLE data_2018(
  	government_corr FLOAT,
 	social_support FLOAT,
 	continent VARCHAR(40)           NOT NULL,
+	population FLOAT                NOT NULL,
  	PRIMARY KEY (country)
  );
 
@@ -70,6 +74,7 @@ CREATE TABLE data_2019(
  	government_corr FLOAT,
 	social_support FLOAT,
 	continent VARCHAR(40)           NOT NULL,
+	population FLOAT                NOT NULL,
  	PRIMARY KEY (country)
  );
 
