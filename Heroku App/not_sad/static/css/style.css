@@ -49,6 +49,10 @@ h5 {
     font-family: "Poppins", serif;
 }
 
+.img {
+    text-align: center;
+}
+
 .jumbotron {
     margin-bottom: 0; 
 } 

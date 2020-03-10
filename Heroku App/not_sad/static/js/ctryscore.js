@@ -37,7 +37,7 @@ function updateValue() {
 
   // Change input value to 0 or 1 based on country's happiness score
 
-  d3.csv("/static/data/clean_2019.csv").then(function(data) { 
+  d3.csv("/static/data/clean_2019.csv", function(data) { 
     ctryData = data.filter( el => { if (myCtry.includes(el.country)) return el; })
     console.log("selected country: ", ctryData)
     // console.log("ctry score = ", ctryData.map(x => x.happiness_score)

@@ -120,7 +120,7 @@ def factors():
 def charts():
     return render_template("charts.html")
 
-@app.route("/predict")
+@app.route("/predict", )
 def predict():
     return render_template("predict.html")
 
@@ -131,12 +131,13 @@ def ValuePredictor(to_predict_list):
 
     print(to_predict_list)
     to_predict = np.array(to_predict_list).reshape(1,6)
-    loaded_model = pickle.load(open("model.pkl","rb"))
+    loaded_model = pickle.load(open("static/data/model.pkl","rb"))
     result = loaded_model.predict(to_predict)
+    print (result[0])
     return result[0]
     # return to_predict_list
 
-@app.route("/result", methods = ['POST'])
+@app.route("/result.html", methods = ['GET','POST'])
 def result():
 
     # test
@@ -173,9 +174,7 @@ def result():
         else:
             prediction='Not Happy, To know happiness, you have to be unhappy sometimes.' 
             
-        return render_template("result.html",prediction=prediction)   
-    
-    return render_template("result.html")   
+        return render_template("result.html",prediction=prediction)       
 
 @app.route("/process")
 def process():

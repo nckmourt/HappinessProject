@@ -64,11 +64,11 @@ var myData = [];
 // Use d3 to read database - build chart data
 //============================================
 
-d3.csv("/static/data/whd-2015-19.csv").then(function(data) {
+d3.csv("/static/data/whd-2015-19.csv", function(data) {
   console.log(data[0]);
 });
 
-d3.csv("/static/data/whd-2015-19.csv").then(function(data) {
+d3.csv("/static/data/whd-2015-19.csv", function(data) {
   v_country = data.map(d => d.country);
   v_rank =data.map(d => d.happiness_rank);
   v_score = data.map(d => d.happiness_score);  
