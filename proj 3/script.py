@@ -1,7 +1,5 @@
 #ml categorical decision tree to predict happiness - flask
 
-
-
 #################################################
 # import libraries
 #################################################
@@ -10,6 +8,13 @@ import numpy as np
 import flask
 import pickle
 from flask import Flask, render_template, request
+
+# pathStr = 'model.pkl'
+# if os.path.exists(pathStr) :
+#     print("Path " , pathStr, " exists")
+# else:
+#     print("Path " , pathStr, " does not exists")   
+
 
 
 #################################################
@@ -30,28 +35,29 @@ def ML():
 #################################################
 #prediction function
 #################################################
+
 def ValuePredictor(to_predict_list):
 
     print(to_predict_list)
     to_predict = np.array(to_predict_list).reshape(1,6)
+    # loaded_model = pickle.load(open("/static/data/model.pkl","rb"))
     loaded_model = pickle.load(open("model.pkl","rb"))
     result = loaded_model.predict(to_predict)
     return result[0]
     # return to_predict_list
 
 
-
 @app.route('/result',methods = ['POST'])
 def result():
 
     # test
-    '''
+    
     to_predict_list = request.form.to_dict()
     to_predict_keys=list(to_predict_list.keys())
     to_predict_list=list(to_predict_list.values())
     print(to_predict_keys)
     print(to_predict_list)
-    '''
+    
 
     if request.method == 'POST':
         to_predict_list = request.form.to_dict()
@@ -60,13 +66,6 @@ def result():
         result = ValuePredictor(to_predict_list)
         
 
-#         if b > a:
-#   print("b is greater than a")
-# elif a == b:
-#   print("a and b are equal")
-# else:
-#   print("a is greater than b")
-
         if int(result)==4:
             prediction='Very Happy, #Blessed!'
         elif int(result)==3:
@@ -74,7 +73,7 @@ def result():
         elif int(result)==2:
             prediction='Somewhat Happy, Doing alright.'   
         elif int(result)==1:
-            prediction='Not too Happy, Things could be better.'  
+            prediction='Not too Happy, Things could be better'  
         else:
             prediction='Not Happy, To know happiness, you have to be unhappy sometimes.' 
             

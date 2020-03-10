@@ -1,0 +1,433 @@
+Score,Health,Relationship,Beauty,Living,Support,Output
+0,Yes,Yes,Yes,Yes,Yes,Happy
+0,Yes,Yes,Yes,Yes,Complicated,Happy
+0,Yes,Yes,Yes,Yes,No,Somewhat Happy
+0,Yes,Yes,Yes,Complicated,Yes,Happy
+0,Yes,Yes,Yes,Complicated,Complicated,Somewhat Happy
+0,Yes,Yes,Yes,Complicated,No,Somewhat Happy
+0,Yes,Yes,Yes,No,Yes,Somewhat Happy
+0,Yes,Yes,Yes,No,Complicated,Somewhat Happy
+0,Yes,Yes,Yes,No,No,Not Too Happy
+0,Yes,Yes,Complicated,Yes,Yes,Happy
+0,Yes,Yes,Complicated,Yes,Complicated,Somewhat Happy
+0,Yes,Yes,Complicated,Yes,No,Somewhat Happy
+0,Yes,Yes,Complicated,Complicated,Yes,Somewhat Happy
+0,Yes,Yes,Complicated,Complicated,Complicated,Somewhat Happy
+0,Yes,Yes,Complicated,Complicated,No,Not Too Happy
+0,Yes,Yes,Complicated,No,Yes,Somewhat Happy
+0,Yes,Yes,Complicated,No,Complicated,Not Too Happy
+0,Yes,Yes,Complicated,No,No,Not Happy
+0,Yes,Yes,No,Yes,Yes,Somewhat Happy
+0,Yes,Yes,No,Yes,Complicated,Somewhat Happy
+0,Yes,Yes,No,Yes,No,Not Too Happy
+0,Yes,Yes,No,Complicated,Yes,Somewhat Happy
+0,Yes,Yes,No,Complicated,Complicated,Not Too Happy
+0,Yes,Yes,No,Complicated,No,Not Happy
+0,Yes,Yes,No,No,Yes,Not Too Happy
+0,Yes,Yes,No,No,Complicated,Not Happy
+0,Yes,Yes,No,No,No,Not Happy
+0,Yes,Complicated,Yes,Yes,Yes,Happy
+0,Yes,Complicated,Yes,Yes,Complicated,Somewhat Happy
+0,Yes,Complicated,Yes,Yes,No,Somewhat Happy
+0,Yes,Complicated,Yes,Complicated,Yes,Somewhat Happy
+0,Yes,Complicated,Yes,Complicated,Complicated,Somewhat Happy
+0,Yes,Complicated,Yes,Complicated,No,Not Too Happy
+0,Yes,Complicated,Yes,No,Yes,Somewhat Happy
+0,Yes,Complicated,Yes,No,Complicated,Not Too Happy
+0,Yes,Complicated,Yes,No,No,Not Happy
+0,Yes,Complicated,Complicated,Yes,Yes,Somewhat Happy
+0,Yes,Complicated,Complicated,Yes,Complicated,Somewhat Happy
+0,Yes,Complicated,Complicated,Yes,No,Not Too Happy
+0,Yes,Complicated,Complicated,Complicated,Yes,Somewhat Happy
+0,Yes,Complicated,Complicated,Complicated,Complicated,Not Too Happy
+0,Yes,Complicated,Complicated,Complicated,No,Not Happy
+0,Yes,Complicated,Complicated,No,Yes,Not Too Happy
+0,Yes,Complicated,Complicated,No,Complicated,Not Happy
+0,Yes,Complicated,Complicated,No,No,Not Happy
+0,Yes,Complicated,No,Yes,Yes,Somewhat Happy
+0,Yes,Complicated,No,Yes,Complicated,Not Too Happy
+0,Yes,Complicated,No,Yes,No,Not Happy
+0,Yes,Complicated,No,Complicated,Yes,Not Too Happy
+0,Yes,Complicated,No,Complicated,Complicated,Not Happy
+0,Yes,Complicated,No,Complicated,No,Not Happy
+0,Yes,Complicated,No,No,Yes,Not Happy
+0,Yes,Complicated,No,No,Complicated,Not Happy
+0,Yes,Complicated,No,No,No,Not Happy
+0,Yes,No,Complicated,Yes,Yes,Somewhat Happy
+0,Yes,No,Complicated,Yes,Complicated,Not Too Happy
+0,Yes,No,Complicated,Yes,No,Not Happy
+0,Yes,No,Complicated,Complicated,Yes,Not Too Happy
+0,Yes,No,Complicated,Complicated,Complicated,Not Happy
+0,Yes,No,Complicated,Complicated,No,Not Happy
+0,Yes,No,Complicated,No,Yes,Not Happy
+0,Yes,No,Complicated,No,Complicated,Not Happy
+0,Yes,No,Complicated,No,No,Not Happy
+0,Yes,No,No,Yes,Yes,Not Too Happy
+0,Yes,No,No,Yes,Complicated,Not Happy
+0,Yes,No,No,Yes,No,Not Happy
+0,Yes,No,No,Complicated,Yes,Not Happy
+0,Yes,No,No,Complicated,Complicated,Not Happy
+0,Yes,No,No,Complicated,No,Not Happy
+0,Yes,No,No,No,Yes,Not Happy
+0,Yes,No,No,No,Complicated,Not Happy
+0,Yes,No,No,No,No,Not Happy
+0,Complicated,Yes,Yes,Yes,Yes,Happy
+0,Complicated,Yes,Yes,Yes,Complicated,Somewhat Happy
+0,Complicated,Yes,Yes,Yes,No,Somewhat Happy
+0,Complicated,Yes,Yes,Complicated,Yes,Somewhat Happy
+0,Complicated,Yes,Yes,Complicated,Complicated,Somewhat Happy
+0,Complicated,Yes,Yes,Complicated,No,Not Too Happy
+0,Complicated,Yes,Yes,No,Yes,Somewhat Happy
+0,Complicated,Yes,Yes,No,Complicated,Not Too Happy
+0,Complicated,Yes,Yes,No,No,Not Happy
+0,Complicated,Yes,Complicated,Yes,Yes,Somewhat Happy
+0,Complicated,Yes,Complicated,Yes,Complicated,Somewhat Happy
+0,Complicated,Yes,Complicated,Yes,No,Not Too Happy
+0,Complicated,Yes,Complicated,Complicated,Yes,Somewhat Happy
+0,Complicated,Yes,Complicated,Complicated,Complicated,Not Too Happy
+0,Complicated,Yes,Complicated,Complicated,No,Not Happy
+0,Complicated,Yes,Complicated,No,Yes,Not Too Happy
+0,Complicated,Yes,Complicated,No,Complicated,Not Happy
+0,Complicated,Yes,Complicated,No,No,Not Happy
+0,Complicated,Yes,No,Yes,Yes,Somewhat Happy
+0,Complicated,Yes,No,Yes,Complicated,Not Too Happy
+0,Complicated,Yes,No,Yes,No,Not Happy
+0,Complicated,Yes,No,Complicated,Yes,Not Too Happy
+0,Complicated,Yes,No,Complicated,Complicated,Not Happy
+0,Complicated,Yes,No,Complicated,No,Not Happy
+0,Complicated,Yes,No,No,Yes,Not Happy
+0,Complicated,Yes,No,No,Complicated,Not Happy
+0,Complicated,Yes,No,No,No,Not Happy
+0,Complicated,Complicated,Yes,Yes,Yes,Somewhat Happy
+0,Complicated,Complicated,Yes,Yes,Complicated,Somewhat Happy
+0,Complicated,Complicated,Yes,Yes,No,Not Too Happy
+0,Complicated,Complicated,Yes,Complicated,Yes,Somewhat Happy
+0,Complicated,Complicated,Yes,Complicated,Complicated,Not Too Happy
+0,Complicated,Complicated,Yes,Complicated,No,Not Happy
+0,Complicated,Complicated,Yes,No,Yes,Not Too Happy
+0,Complicated,Complicated,Yes,No,Complicated,Not Happy
+0,Complicated,Complicated,Yes,No,No,Not Happy
+0,Complicated,Complicated,Complicated,Yes,Yes,Somewhat Happy
+0,Complicated,Complicated,Complicated,Yes,Complicated,Not Too Happy
+0,Complicated,Complicated,Complicated,Yes,No,Not Happy
+0,Complicated,Complicated,Complicated,Complicated,Yes,Not Too Happy
+0,Complicated,Complicated,Complicated,Complicated,Complicated,Not Happy
+0,Complicated,Complicated,Complicated,Complicated,No,Not Happy
+0,Complicated,Complicated,Complicated,No,Yes,Not Happy
+0,Complicated,Complicated,Complicated,No,Complicated,Not Happy
+0,Complicated,Complicated,Complicated,No,No,Not Happy
+0,Complicated,Complicated,No,Yes,Yes,Not Too Happy
+0,Complicated,Complicated,No,Yes,Complicated,Not Happy
+0,Complicated,Complicated,No,Yes,No,Not Happy
+0,Complicated,Complicated,No,Complicated,Yes,Not Happy
+0,Complicated,Complicated,No,Complicated,Complicated,Not Happy
+0,Complicated,Complicated,No,Complicated,No,Not Happy
+0,Complicated,Complicated,No,No,Yes,Not Happy
+0,Complicated,Complicated,No,No,Complicated,Not Happy
+0,Complicated,Complicated,No,No,No,Not Happy
+0,Complicated,No,Complicated,Yes,Yes,Not Too Happy
+0,Complicated,No,Complicated,Yes,Complicated,Not Happy
+0,Complicated,No,Complicated,Yes,No,Not Happy
+0,Complicated,No,Complicated,Complicated,Yes,Not Happy
+0,Complicated,No,Complicated,Complicated,Complicated,Not Happy
+0,Complicated,No,Complicated,Complicated,No,Not Happy
+0,Complicated,No,Complicated,No,Yes,Not Happy
+0,Complicated,No,Complicated,No,Complicated,Not Happy
+0,Complicated,No,Complicated,No,No,Not Happy
+0,Complicated,No,No,Yes,Yes,Not Happy
+0,Complicated,No,No,Yes,Complicated,Not Happy
+0,Complicated,No,No,Yes,No,Not Happy
+0,Complicated,No,No,Complicated,Yes,Not Happy
+0,Complicated,No,No,Complicated,Complicated,Not Happy
+0,Complicated,No,No,Complicated,No,Not Happy
+0,Complicated,No,No,No,Yes,Not Happy
+0,Complicated,No,No,No,Complicated,Not Happy
+0,Complicated,No,No,No,No,Not Happy
+0,No,Yes,Yes,Yes,Yes,Somewhat Happy
+0,No,Yes,Yes,Yes,Complicated,Somewhat Happy
+0,No,Yes,Yes,Yes,No,Not Too Happy
+0,No,Yes,Yes,Complicated,Yes,Somewhat Happy
+0,No,Yes,Yes,Complicated,Complicated,Not Too Happy
+0,No,Yes,Yes,Complicated,No,Not Happy
+0,No,Yes,Yes,No,Yes,Not Too Happy
+0,No,Yes,Yes,No,Complicated,Not Happy
+0,No,Yes,Yes,No,No,Not Happy
+0,No,Yes,Complicated,Yes,Yes,Somewhat Happy
+0,No,Yes,Complicated,Yes,Complicated,Not Too Happy
+0,No,Yes,Complicated,Yes,No,Not Happy
+0,No,Yes,Complicated,Complicated,Yes,Not Too Happy
+0,No,Yes,Complicated,Complicated,Complicated,Not Happy
+0,No,Yes,Complicated,Complicated,No,Not Happy
+0,No,Yes,Complicated,No,Yes,Not Happy
+0,No,Yes,Complicated,No,Complicated,Not Happy
+0,No,Yes,Complicated,No,No,Not Happy
+0,No,Yes,No,Yes,Yes,Not Too Happy
+0,No,Yes,No,Yes,Complicated,Not Happy
+0,No,Yes,No,Yes,No,Not Happy
+0,No,Yes,No,Complicated,Yes,Not Happy
+0,No,Yes,No,Complicated,Complicated,Not Happy
+0,No,Yes,No,Complicated,No,Not Happy
+0,No,Yes,No,No,Yes,Not Happy
+0,No,Yes,No,No,Complicated,Not Happy
+0,No,Yes,No,No,No,Not Happy
+0,No,Complicated,Yes,Yes,Yes,Somewhat Happy
+0,No,Complicated,Yes,Yes,Complicated,Not Too Happy
+0,No,Complicated,Yes,Yes,No,Not Happy
+0,No,Complicated,Yes,Complicated,Yes,Not Too Happy
+0,No,Complicated,Yes,Complicated,Complicated,Not Happy
+0,No,Complicated,Yes,Complicated,No,Not Happy
+0,No,Complicated,Yes,No,Yes,Not Happy
+0,No,Complicated,Yes,No,Complicated,Not Happy
+0,No,Complicated,Yes,No,No,Not Happy
+0,No,Complicated,Complicated,Yes,Yes,Not Too Happy
+0,No,Complicated,Complicated,Yes,Complicated,Not Happy
+0,No,Complicated,Complicated,Yes,No,Not Happy
+0,No,Complicated,Complicated,Complicated,Yes,Not Happy
+0,No,Complicated,Complicated,Complicated,Complicated,Not Happy
+0,No,Complicated,Complicated,Complicated,No,Not Happy
+0,No,Complicated,Complicated,No,Yes,Not Happy
+0,No,Complicated,Complicated,No,Complicated,Not Happy
+0,No,Complicated,Complicated,No,No,Not Happy
+0,No,Complicated,No,Yes,Yes,Not Happy
+0,No,Complicated,No,Yes,Complicated,Not Happy
+0,No,Complicated,No,Yes,No,Not Happy
+0,No,Complicated,No,Complicated,Yes,Not Happy
+0,No,Complicated,No,Complicated,Complicated,Not Happy
+0,No,Complicated,No,Complicated,No,Not Happy
+0,No,Complicated,No,No,Yes,Not Happy
+0,No,Complicated,No,No,Complicated,Not Happy
+0,No,Complicated,No,No,No,Not Happy
+0,No,No,Complicated,Yes,Yes,Not Happy
+0,No,No,Complicated,Yes,Complicated,Not Happy
+0,No,No,Complicated,Yes,No,Not Happy
+0,No,No,Complicated,Complicated,Yes,Not Happy
+0,No,No,Complicated,Complicated,Complicated,Not Happy
+0,No,No,Complicated,Complicated,No,Not Happy
+0,No,No,Complicated,No,Yes,Not Happy
+0,No,No,Complicated,No,Complicated,Not Happy
+0,No,No,Complicated,No,No,Not Happy
+0,No,No,No,Yes,Yes,Not Happy
+0,No,No,No,Yes,Complicated,Not Happy
+0,No,No,No,Yes,No,Not Happy
+0,No,No,No,Complicated,Yes,Not Happy
+0,No,No,No,Complicated,Complicated,Not Happy
+0,No,No,No,Complicated,No,Not Happy
+0,No,No,No,No,Yes,Not Happy
+0,No,No,No,No,Complicated,Not Happy
+0,No,No,No,No,No,Not Happy
+1,Yes,Yes,Yes,Yes,Yes,Very Happy
+1,Yes,Yes,Yes,Yes,Complicated,Very Happy
+1,Yes,Yes,Yes,Yes,No,Happy
+1,Yes,Yes,Yes,Complicated,Yes,Very Happy
+1,Yes,Yes,Yes,Complicated,Complicated,Happy
+1,Yes,Yes,Yes,Complicated,No,Happy
+1,Yes,Yes,Yes,No,Yes,Happy
+1,Yes,Yes,Yes,No,Complicated,Happy
+1,Yes,Yes,Yes,No,No,Somewhat Happy
+1,Yes,Yes,Complicated,Yes,Yes,Very Happy
+1,Yes,Yes,Complicated,Yes,Complicated,Happy
+1,Yes,Yes,Complicated,Yes,No,Happy
+1,Yes,Yes,Complicated,Complicated,Yes,Happy
+1,Yes,Yes,Complicated,Complicated,Complicated,Happy
+1,Yes,Yes,Complicated,Complicated,No,Somewhat Happy
+1,Yes,Yes,Complicated,No,Yes,Happy
+1,Yes,Yes,Complicated,No,Complicated,Somewhat Happy
+1,Yes,Yes,Complicated,No,No,Not Too Happy
+1,Yes,Yes,No,Yes,Yes,Happy
+1,Yes,Yes,No,Yes,Complicated,Happy
+1,Yes,Yes,No,Yes,No,Somewhat Happy
+1,Yes,Yes,No,Complicated,Yes,Happy
+1,Yes,Yes,No,Complicated,Complicated,Somewhat Happy
+1,Yes,Yes,No,Complicated,No,Not Too Happy
+1,Yes,Yes,No,No,Yes,Somewhat Happy
+1,Yes,Yes,No,No,Complicated,Not Too Happy
+1,Yes,Yes,No,No,No,Not Too Happy
+1,Yes,Complicated,Yes,Yes,Yes,Very Happy
+1,Yes,Complicated,Yes,Yes,Complicated,Happy
+1,Yes,Complicated,Yes,Yes,No,Happy
+1,Yes,Complicated,Yes,Complicated,Yes,Happy
+1,Yes,Complicated,Yes,Complicated,Complicated,Happy
+1,Yes,Complicated,Yes,Complicated,No,Somewhat Happy
+1,Yes,Complicated,Yes,No,Yes,Happy
+1,Yes,Complicated,Yes,No,Complicated,Somewhat Happy
+1,Yes,Complicated,Yes,No,No,Not Too Happy
+1,Yes,Complicated,Complicated,Yes,Yes,Happy
+1,Yes,Complicated,Complicated,Yes,Complicated,Happy
+1,Yes,Complicated,Complicated,Yes,No,Somewhat Happy
+1,Yes,Complicated,Complicated,Complicated,Yes,Happy
+1,Yes,Complicated,Complicated,Complicated,Complicated,Somewhat Happy
+1,Yes,Complicated,Complicated,Complicated,No,Not Too Happy
+1,Yes,Complicated,Complicated,No,Yes,Somewhat Happy
+1,Yes,Complicated,Complicated,No,Complicated,Not Too Happy
+1,Yes,Complicated,Complicated,No,No,Not Too Happy
+1,Yes,Complicated,No,Yes,Yes,Happy
+1,Yes,Complicated,No,Yes,Complicated,Somewhat Happy
+1,Yes,Complicated,No,Yes,No,Not Too Happy
+1,Yes,Complicated,No,Complicated,Yes,Somewhat Happy
+1,Yes,Complicated,No,Complicated,Complicated,Not Too Happy
+1,Yes,Complicated,No,Complicated,No,Not Too Happy
+1,Yes,Complicated,No,No,Yes,Not Too Happy
+1,Yes,Complicated,No,No,Complicated,Not Too Happy
+1,Yes,Complicated,No,No,No,Not Too Happy
+1,Yes,No,Complicated,Yes,Yes,Happy
+1,Yes,No,Complicated,Yes,Complicated,Somewhat Happy
+1,Yes,No,Complicated,Yes,No,Not Too Happy
+1,Yes,No,Complicated,Complicated,Yes,Somewhat Happy
+1,Yes,No,Complicated,Complicated,Complicated,Not Too Happy
+1,Yes,No,Complicated,Complicated,No,Not Too Happy
+1,Yes,No,Complicated,No,Yes,Not Too Happy
+1,Yes,No,Complicated,No,Complicated,Not Too Happy
+1,Yes,No,Complicated,No,No,Not Too Happy
+1,Yes,No,No,Yes,Yes,Somewhat Happy
+1,Yes,No,No,Yes,Complicated,Not Too Happy
+1,Yes,No,No,Yes,No,Not Too Happy
+1,Yes,No,No,Complicated,Yes,Not Too Happy
+1,Yes,No,No,Complicated,Complicated,Not Too Happy
+1,Yes,No,No,Complicated,No,Not Too Happy
+1,Yes,No,No,No,Yes,Not Too Happy
+1,Yes,No,No,No,Complicated,Not Too Happy
+1,Yes,No,No,No,No,Not Too Happy
+1,Complicated,Yes,Yes,Yes,Yes,Very Happy
+1,Complicated,Yes,Yes,Yes,Complicated,Happy
+1,Complicated,Yes,Yes,Yes,No,Happy
+1,Complicated,Yes,Yes,Complicated,Yes,Happy
+1,Complicated,Yes,Yes,Complicated,Complicated,Happy
+1,Complicated,Yes,Yes,Complicated,No,Somewhat Happy
+1,Complicated,Yes,Yes,No,Yes,Happy
+1,Complicated,Yes,Yes,No,Complicated,Somewhat Happy
+1,Complicated,Yes,Yes,No,No,Not Too Happy
+1,Complicated,Yes,Complicated,Yes,Yes,Happy
+1,Complicated,Yes,Complicated,Yes,Complicated,Happy
+1,Complicated,Yes,Complicated,Yes,No,Somewhat Happy
+1,Complicated,Yes,Complicated,Complicated,Yes,Happy
+1,Complicated,Yes,Complicated,Complicated,Complicated,Somewhat Happy
+1,Complicated,Yes,Complicated,Complicated,No,Not Too Happy
+1,Complicated,Yes,Complicated,No,Yes,Somewhat Happy
+1,Complicated,Yes,Complicated,No,Complicated,Not Too Happy
+1,Complicated,Yes,Complicated,No,No,Not Too Happy
+1,Complicated,Yes,No,Yes,Yes,Happy
+1,Complicated,Yes,No,Yes,Complicated,Somewhat Happy
+1,Complicated,Yes,No,Yes,No,Not Too Happy
+1,Complicated,Yes,No,Complicated,Yes,Somewhat Happy
+1,Complicated,Yes,No,Complicated,Complicated,Not Too Happy
+1,Complicated,Yes,No,Complicated,No,Not Too Happy
+1,Complicated,Yes,No,No,Yes,Not Too Happy
+1,Complicated,Yes,No,No,Complicated,Not Too Happy
+1,Complicated,Yes,No,No,No,Not Too Happy
+1,Complicated,Complicated,Yes,Yes,Yes,Happy
+1,Complicated,Complicated,Yes,Yes,Complicated,Happy
+1,Complicated,Complicated,Yes,Yes,No,Somewhat Happy
+1,Complicated,Complicated,Yes,Complicated,Yes,Happy
+1,Complicated,Complicated,Yes,Complicated,Complicated,Somewhat Happy
+1,Complicated,Complicated,Yes,Complicated,No,Not Too Happy
+1,Complicated,Complicated,Yes,No,Yes,Somewhat Happy
+1,Complicated,Complicated,Yes,No,Complicated,Not Too Happy
+1,Complicated,Complicated,Yes,No,No,Not Too Happy
+1,Complicated,Complicated,Complicated,Yes,Yes,Happy
+1,Complicated,Complicated,Complicated,Yes,Complicated,Somewhat Happy
+1,Complicated,Complicated,Complicated,Yes,No,Not Too Happy
+1,Complicated,Complicated,Complicated,Complicated,Yes,Somewhat Happy
+1,Complicated,Complicated,Complicated,Complicated,Complicated,Not Too Happy
+1,Complicated,Complicated,Complicated,Complicated,No,Not Too Happy
+1,Complicated,Complicated,Complicated,No,Yes,Not Too Happy
+1,Complicated,Complicated,Complicated,No,Complicated,Not Too Happy
+1,Complicated,Complicated,Complicated,No,No,Not Too Happy
+1,Complicated,Complicated,No,Yes,Yes,Somewhat Happy
+1,Complicated,Complicated,No,Yes,Complicated,Not Too Happy
+1,Complicated,Complicated,No,Yes,No,Not Too Happy
+1,Complicated,Complicated,No,Complicated,Yes,Not Too Happy
+1,Complicated,Complicated,No,Complicated,Complicated,Not Too Happy
+1,Complicated,Complicated,No,Complicated,No,Not Too Happy
+1,Complicated,Complicated,No,No,Yes,Not Too Happy
+1,Complicated,Complicated,No,No,Complicated,Not Too Happy
+1,Complicated,Complicated,No,No,No,Not Too Happy
+1,Complicated,No,Complicated,Yes,Yes,Somewhat Happy
+1,Complicated,No,Complicated,Yes,Complicated,Not Too Happy
+1,Complicated,No,Complicated,Yes,No,Not Too Happy
+1,Complicated,No,Complicated,Complicated,Yes,Not Too Happy
+1,Complicated,No,Complicated,Complicated,Complicated,Not Too Happy
+1,Complicated,No,Complicated,Complicated,No,Not Too Happy
+1,Complicated,No,Complicated,No,Yes,Not Too Happy
+1,Complicated,No,Complicated,No,Complicated,Not Too Happy
+1,Complicated,No,Complicated,No,No,Not Too Happy
+1,Complicated,No,No,Yes,Yes,Not Too Happy
+1,Complicated,No,No,Yes,Complicated,Not Too Happy
+1,Complicated,No,No,Yes,No,Not Too Happy
+1,Complicated,No,No,Complicated,Yes,Not Too Happy
+1,Complicated,No,No,Complicated,Complicated,Not Too Happy
+1,Complicated,No,No,Complicated,No,Not Too Happy
+1,Complicated,No,No,No,Yes,Not Too Happy
+1,Complicated,No,No,No,Complicated,Not Too Happy
+1,Complicated,No,No,No,No,Not Too Happy
+1,No,Yes,Yes,Yes,Yes,Happy
+1,No,Yes,Yes,Yes,Complicated,Happy
+1,No,Yes,Yes,Yes,No,Somewhat Happy
+1,No,Yes,Yes,Complicated,Yes,Happy
+1,No,Yes,Yes,Complicated,Complicated,Somewhat Happy
+1,No,Yes,Yes,Complicated,No,Not Too Happy
+1,No,Yes,Yes,No,Yes,Somewhat Happy
+1,No,Yes,Yes,No,Complicated,Not Too Happy
+1,No,Yes,Yes,No,No,Not Too Happy
+1,No,Yes,Complicated,Yes,Yes,Happy
+1,No,Yes,Complicated,Yes,Complicated,Somewhat Happy
+1,No,Yes,Complicated,Yes,No,Not Too Happy
+1,No,Yes,Complicated,Complicated,Yes,Somewhat Happy
+1,No,Yes,Complicated,Complicated,Complicated,Not Too Happy
+1,No,Yes,Complicated,Complicated,No,Not Too Happy
+1,No,Yes,Complicated,No,Yes,Not Too Happy
+1,No,Yes,Complicated,No,Complicated,Not Too Happy
+1,No,Yes,Complicated,No,No,Not Too Happy
+1,No,Yes,No,Yes,Yes,Somewhat Happy
+1,No,Yes,No,Yes,Complicated,Not Too Happy
+1,No,Yes,No,Yes,No,Not Too Happy
+1,No,Yes,No,Complicated,Yes,Not Too Happy
+1,No,Yes,No,Complicated,Complicated,Not Too Happy
+1,No,Yes,No,Complicated,No,Not Too Happy
+1,No,Yes,No,No,Yes,Not Too Happy
+1,No,Yes,No,No,Complicated,Not Too Happy
+1,No,Yes,No,No,No,Not Too Happy
+1,No,Complicated,Yes,Yes,Yes,Happy
+1,No,Complicated,Yes,Yes,Complicated,Somewhat Happy
+1,No,Complicated,Yes,Yes,No,Not Too Happy
+1,No,Complicated,Yes,Complicated,Yes,Somewhat Happy
+1,No,Complicated,Yes,Complicated,Complicated,Not Too Happy
+1,No,Complicated,Yes,Complicated,No,Not Too Happy
+1,No,Complicated,Yes,No,Yes,Not Too Happy
+1,No,Complicated,Yes,No,Complicated,Not Too Happy
+1,No,Complicated,Yes,No,No,Not Too Happy
+1,No,Complicated,Complicated,Yes,Yes,Somewhat Happy
+1,No,Complicated,Complicated,Yes,Complicated,Not Too Happy
+1,No,Complicated,Complicated,Yes,No,Not Too Happy
+1,No,Complicated,Complicated,Complicated,Yes,Not Too Happy
+1,No,Complicated,Complicated,Complicated,Complicated,Not Too Happy
+1,No,Complicated,Complicated,Complicated,No,Not Too Happy
+1,No,Complicated,Complicated,No,Yes,Not Too Happy
+1,No,Complicated,Complicated,No,Complicated,Not Too Happy
+1,No,Complicated,Complicated,No,No,Not Too Happy
+1,No,Complicated,No,Yes,Yes,Not Too Happy
+1,No,Complicated,No,Yes,Complicated,Not Too Happy
+1,No,Complicated,No,Yes,No,Not Too Happy
+1,No,Complicated,No,Complicated,Yes,Not Too Happy
+1,No,Complicated,No,Complicated,Complicated,Not Too Happy
+1,No,Complicated,No,Complicated,No,Not Too Happy
+1,No,Complicated,No,No,Yes,Not Too Happy
+1,No,Complicated,No,No,Complicated,Not Too Happy
+1,No,Complicated,No,No,No,Not Too Happy
+1,No,No,Complicated,Yes,Yes,Not Too Happy
+1,No,No,Complicated,Yes,Complicated,Not Too Happy
+1,No,No,Complicated,Yes,No,Not Too Happy
+1,No,No,Complicated,Complicated,Yes,Not Too Happy
+1,No,No,Complicated,Complicated,Complicated,Not Too Happy
+1,No,No,Complicated,Complicated,No,Not Too Happy
+1,No,No,Complicated,No,Yes,Not Too Happy
+1,No,No,Complicated,No,Complicated,Not Too Happy
+1,No,No,Complicated,No,No,Not Too Happy
+1,No,No,No,Yes,Yes,Not Too Happy
+1,No,No,No,Yes,Complicated,Not Too Happy
+1,No,No,No,Yes,No,Not Too Happy
+1,No,No,No,Complicated,Yes,Not Too Happy
+1,No,No,No,Complicated,Complicated,Not Too Happy
+1,No,No,No,Complicated,No,Not Too Happy
+1,No,No,No,No,Yes,Not Too Happy
+1,No,No,No,No,Complicated,Not Too Happy
+1,No,No,No,No,No,Not Too Happy
