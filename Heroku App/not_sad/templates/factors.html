@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Six Factors</title>
+    <title>Factors Exploration</title>
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
     <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -40,8 +40,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="factors">Factors</a>
-            <a class="dropdown-item" href="#">Machine Learning</a>
-            <a class="dropdown-item" href="#">Tableau</a>
+            <a class="dropdown-item" href="dashboard">Happiness Changes</a>
+            <a class="dropdown-item" href="implications">Conclusions</a>
           </div>
         </li>
         <li class="nav-item">
@@ -149,12 +149,15 @@
             </div>
         </div>
     </div>
-    <div class = "container">
+    <div class = "container container-fluid" >
         <div class = "row">
-            <div id="myDiv" style= "text-align: center; height: 500px; width: 950px"></div><!-- Plotly chart will be drawn inside this DIV -->  
+            <div class = "col-md-12 col-sm-12">
+                <div id="myDiv" style= "text-align: center;"></div><!-- Plotly chart will be drawn inside this DIV -->  
+            </div> 
         </div>
     </div>
 
+    <!-- style= "height: 500px; width: 950px" -->
     <div class = "container">
         <div class = "row">
             <div class = "col-md-12">

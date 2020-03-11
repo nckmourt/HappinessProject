@@ -166,7 +166,7 @@ def result():
         if int(result)==4:
             prediction='Very Happy, #Blessed!'
         elif int(result)==3:
-            prediction='Happy, Live is good!'
+            prediction='Happy, Life is good!'
         elif int(result)==2:
             prediction='Somewhat Happy, Doing alright.'   
         elif int(result)==1:
@@ -179,6 +179,14 @@ def result():
 @app.route("/process")
 def process():
     return render_template("process.html")
+
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
+
+@app.route("/implications")
+def implications():
+    return render_template("implications.html")
 
 # Query the database and send the jsonified results
 @app.route("/api/year/2015")

@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Happiness Project</title>
-
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Result</title>
 
     <!-- d3 JavaScript -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -35,8 +33,8 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="factors">Factors</a>
-                <a class="dropdown-item" href="#">Machine Learning</a>
-                <a class="dropdown-item" href="#">Tableau</a>
+                <a class="dropdown-item" href="dashboard">Happiness Changes</a>
+                <a class="dropdown-item" href="implications">Conclusions</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -49,14 +47,32 @@
         </div>
     </nav>
 
-    <!-- return result -->
-    <div class="container-fluid content-row" style="text-align: center">
-        <br><br><br>
-        <h1>{{ prediction }}</h1>  
-        <br>
-    </div>
+    <div class="bird-box">
 
-    <img class=img src="../static/images/Rotating_earth_(slower).gif"  alt="globe" href="charts" class="img-thumbnail" style = "text-align: center">
+        <div class="bird-container">
+            <div class="bird"></div>
+        </div>
+        
+        <div class="bird-container bird-container--one">
+            <div class="bird bird--one"></div>
+        </div>
+        
+        <div class="bird-container bird-container--two">
+            <div class="bird bird--two"></div>
+        </div>
+        
+        <div class="bird-container bird-container--three">
+            <div class="bird bird--three"></div>
+        </div>
+        
+        <div class="bird-container bird-container--four">
+            <div class="bird bird--four"></div>
+        </div>  
+
+        <div class="result-container"> 
+            <h2>{{ prediction }}</h2>  
+        </div> 
+    </div>
 
     <footer class="py-5 bg-dark">
         <div class="container">
