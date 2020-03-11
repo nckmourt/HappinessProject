@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Happiest Countries</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Result</title>
+
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    ​
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body style="background-color:whitesmoke"> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="charts">Countries</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Factors
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="factors">Factors</a>
+                <a class="dropdown-item" href="dashboard">Happiness Changes</a>
+                <a class="dropdown-item" href="implications">Conclusions</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="predict">Quiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="process">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="bird-box">
+
+        <div class="bird-container">
+            <div class="bird"></div>
+        </div>
         
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <div class="bird-container bird-container--one">
+            <div class="bird bird--one"></div>
+        </div>
         
-        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow"> -->
-        <link rel="stylesheet" href="../static/css/style.css">
+        <div class="bird-container bird-container--two">
+            <div class="bird bird--two"></div>
+        </div>
+        
+        <div class="bird-container bird-container--three">
+            <div class="bird bird--three"></div>
+        </div>
+        
+        <div class="bird-container bird-container--four">
+            <div class="bird bird--four"></div>
+        </div>  
 
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-       
-    </head>
-
-    <body>
-
-    <!-- create Nav Bar -->
-       
-    <div class="wrapper">
-        <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"> <img src="../static/images/happy.png" alt="happy" style="height:100%;display:inline-block; color:#333;"></a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navbarCollapse" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="index.html#page-top" class="nav-link js-scroll-trigger">Home<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html#world" class="nav-link js-scroll-trigger">Global Happiness</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="slides.html#topten" class="nav-link js-scroll-trigger">Happiest Countries</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Explore the Factors</a>
-                        <div class="dropdown-menu">
-                            <a href="factors.html#factors" class="dropdown-item js-scroll-trigger">Factors and Happiness</a>
-                            <a href="factors.html#scatter" class="dropdown-item js-scroll-trigger">The Effect of Time</a>
-                            <a href="charts.html#country" class="dropdown-item js-scroll-trigger">My Country</a>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About Us</a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a href="process.html" class="dropdown-item">Project</a>
-                            <a href="about.html" class="dropdown-item">Team</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="result-container"> 
+            <h2>{{ prediction }}</h2>  
+        </div> 
     </div>
-    
-    
-
-    <!-- return result -->
-    <div class="container-fluid content-row" style="text-align: center">
-        <br><br><br>
-        <h1 style="color:rgb(24, 3, 143); margin-left: 24px ;margin-right: 32px;">{{ prediction }}</h1>  
-        <br>
-    </div>
-    <!-- <h1> {{ prediction }}</h1> -->
-      
-
-    
 
     <footer class="py-5 bg-dark">
         <div class="container">
