@@ -28,7 +28,6 @@
 
 <body style="background-color:whitesmoke"> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <!-- <a class="navbar-brand" href="#">Navigation</a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,8 +45,8 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="factors">Factors</a>
-                <a class="dropdown-item" href="#">Machine Learning</a>
-                <a class="dropdown-item" href="#">Tableau</a>
+                <a class="dropdown-item" href="dashboard">Happiness Changes</a>
+                <a class="dropdown-item" href="implications">Conclusions</a>
               </div>
             </li>
             <li class="nav-item">
@@ -59,29 +58,47 @@
           </ul>
         </div>
     </nav>
+    <div class="container">
+        <div class = "row">      
+            <div class="col-md-12">    
+                <div class="bird-box">
 
-<!-- create navigation
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-        <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="charts">Countries</a>
-        <a class="nav-item nav-link" href="factors">Factors</a>
-        <a class="nav-item nav-link disabled" href="process" tabindex="-1" aria-disabled="true">About Us</a>
+                    <div class="bird-container">
+                        <div class="bird"></div>
+                    </div>
+                    
+                    <div class="bird-container bird-container--one">
+                        <div class="bird bird--one"></div>
+                    </div>
+                    
+                    <div class="bird-container bird-container--two">
+                        <div class="bird bird--two"></div>
+                    </div>
+                    
+                    <div class="bird-container bird-container--three">
+                        <div class="bird bird--three"></div>
+                    </div>
+                    
+                    <div class="bird-container bird-container--four">
+                        <div class="bird bird--four"></div>
+                    </div>  
+
+                    <div class="result-container"> 
+                        <h1 class="display-2">What Makes Us Happy?</h1>
+                        <h4 class="lead">Exploring The World Happiness Report</h4>
+                    </div> 
+                </div>
+            </div>
         </div>
-    </div>
-</nav> -->
-<!-- create header -->
+    </div> 
 
-<div class="jumbotron jumbotron-fluid">
+<!-- <div class="jumbotron jumbotron-fluid">
     <div class="container"></div>
         <h1 class="display-2">What Makes Us Happy?</h1>
         <h4 class="lead">Exploring The World Happiness Report</h4>
     </div>
-</div>
+</div> -->
+
 <!-- div with world map visualization -->
 <div class="container">
     <div class = "row">      
@@ -111,10 +128,11 @@
 <!-- insert Maslow's Hierarchy -->
 <div class = "container">
     <div class = "row">
-        <div class = "col-lg-8 col-md-6">
+        <div class = "col-md-12">
             <img src="../static/images/maslow.png" class="img-fluid" alt="Maslow's Hierarchy">
         </div>
-        <div class = "col-lg-4 col-md-6">
+        <br>
+        <div class = "col-md-12">
             <div class="card">
                 <div class="card-body">
                     <p> According to Kendra Cherry's article on <a href="https://www.verywellmind.com/what-is-maslows-hierarchy-of-needs-4136760">Very Well Mind</a>, Maslow's Hierarchy of Needs - one of the best known theories of motivation - states that people generally need to fulfill the most basic needs, located at the bottom of the pyramid, first before progressing to more complex needs, located at the top of the pyramid. </p>
@@ -138,34 +156,34 @@
 </div>
 <hr>
 <div class = "container fluid content-row">
-    <div class = "row">
+    <div class = "row" style= "text-align: center;">
         <div class = "col-sm-4">
-            <div class="card h-100">
+            <div class="card text-center" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title" style="text-align: center">My Country and Happiness</h5>
-                    <p class="card-text" style="text-align: center; font-size: medium"> See where your country measures up.</p> <br>
-                    <!-- <img class=img src="../static/images/Rotating_earth_(slower).gif"  alt="factors" href="charts" class="img-thumbnail"> -->
-                </div>
-            </div>
-        </div> 
-        <div class="col-sm-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title" style="text-align: center">The Factors<h5>
-                    <p class="card-text" style="text-align: center; font-size: medium">Take a deeper look at happiness.</p> <br>
-                    <!-- <img class=img src="../static/images/pins-on-map-1078850.jpg" alt="mymap" href="charts.html#country">  -->
+                  <h6 class="card-title">My Country and Happiness</h6>
+                  <p class="card-text" style="text-align: center; font-size: medium">See how your country measures up</p>
+                  <a href="charts" class="btn btn-primary" style= "background-color: lightblue;">Countries</a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card h-100">
+        <div class = "col-sm-4">
+            <div class="card text-center" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title" style="text-align: center">What Makes Us Happy?</h5>
-                    <p class="card-text" style="text-align: center; font-size: medium">Find your happiness score.</p><br>
-                    <!-- <img class=img  src="../static/images/march-for-science-2252980_1280.jpg" alt="march" href="ml.html#predictor"> -->
+                  <h6 class="card-title">Explore the Factors</h6>
+                  <p class="card-text" style="text-align: center; font-size: medium"> Take a deeper look at happiness </p>
+                  <a href="factors" class="btn btn-primary" style= "background-color: lightblue;">Factors</a>
                 </div>
             </div>
-        </div> 
+        </div>
+        <div class = "col-sm-4">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                  <h6 class="card-title">Are You Happy?</h6>
+                  <p class="card-text" style="text-align: center; font-size: medium">Find your own happiness score</p>
+                  <a href="predict" class="btn btn-primary" style= "background-color: lightblue;">Quiz</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

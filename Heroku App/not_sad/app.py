@@ -131,7 +131,7 @@ def ValuePredictor(to_predict_list):
 
     print(to_predict_list)
     to_predict = np.array(to_predict_list).reshape(1,6)
-    loaded_model = pickle.load(open("static/data/model.pkl","rb"))
+    loaded_model = pickle.load(open("./model.pkl","rb"))
     result = loaded_model.predict(to_predict)
     print (result[0])
     return result[0]
@@ -166,7 +166,7 @@ def result():
         if int(result)==4:
             prediction='Very Happy, #Blessed!'
         elif int(result)==3:
-            prediction='Happy, Live is good!'
+            prediction='Happy, Life is good!'
         elif int(result)==2:
             prediction='Somewhat Happy, Doing alright.'   
         elif int(result)==1:
@@ -179,6 +179,14 @@ def result():
 @app.route("/process")
 def process():
     return render_template("process.html")
+
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
+
+@app.route("/implications")
+def implications():
+    return render_template("implications.html")
 
 # Query the database and send the jsonified results
 @app.route("/api/year/2015")

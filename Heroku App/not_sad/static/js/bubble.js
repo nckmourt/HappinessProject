@@ -7,15 +7,21 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
     if (!(byYear = lookup[year])) {;
       byYear = lookup[year] = {};
     }
-     // If a container for this year + continent doesn't exist yet,
-     // then create one:
+	 // If a container for this year + continent doesn't exist yet,
+	 // then create one:
     if (!(trace = byYear[continent])) {
       trace = byYear[continent] = {
         x: [],
         y: [],
         id: [],
         text: [],
-        marker: {size: []}
+        marker: {size: []},
+        hovertemplate:
+          "<b>%{text}</b><br><br>" +
+          "%{yaxis.title.text}: %{y:.0}<br>" +
+          "%{xaxis.title.text}: %{x:.0}<br>" +
+          "Population: %{marker.size:,}" +
+          "<extra></extra>"
       };
     }
     return trace;
@@ -27,9 +33,9 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
     var trace = getData(datum.year, datum.continent);
     trace.text.push(datum.country);
     trace.id.push(datum.country);
-    trace.x.push(datum.life_expectancy);
+    trace.x.push(datum.happiness_score);
     trace.y.push(datum.gdp_per_capita);
-    trace.marker.size.push(datum.happiness_score);
+    trace.marker.size.push(datum.population);
   }
 
   // Get the group names:
@@ -43,11 +49,11 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
   var traces = [];
   for (i = 0; i < continents.length; i++) {
     var data = firstYear[continents[i]];
-     // One small note. We're creating a single trace here, to which
-     // the frames will pass data for the different years. It's
-     // subtle, but to avoid data reference problems, we'll slice
-     // the arrays to ensure we never write any new data into our
-     // lookup table:
+	 // One small note. We're creating a single trace here, to which
+	 // the frames will pass data for the different years. It's
+	 // subtle, but to avoid data reference problems, we'll slice
+	 // the arrays to ensure we never write any new data into our
+	 // lookup table:
     traces.push({
       name: continents[i],
       x: data.x.slice(),
@@ -57,8 +63,14 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
       mode: 'markers',
       marker: {
         size: data.marker.size.slice(),
-        sizemode: 'diameter',
-        sizeref: 0.25
+        sizemode: 'area',
+        sizeref: 150,
+      hovertemplate:
+        "<b>%{text}</b><br><br>" +
+        "%{yaxis.title.text}: %{y:.0}<br>" +
+        "%{xaxis.title.text}: %{x:.0}<br>" +
+        "Population: %{marker.size:,}" +
+        "<extra></extra>"
       }
     });
   }
@@ -96,21 +108,21 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
 
   var layout = {
     xaxis: {
-      title: 'Life Expectancy',
-      range: [0, 1.3]
+      title: 'Happiness Score',
+      range: [2, 8]
     },
     yaxis: {
       title: 'GDP per Capita',
-      range: [0, 2]
+      type: [0, 2]
     },
     hovermode: 'closest',
-     // We'll use updatemenus (whose functionality includes menus as
-     // well as buttons) to create a play button and a pause button.
-     // The play button works by passing `null`, which indicates that
-     // Plotly should animate all frames. The pause button works by
-     // passing `[null]`, which indicates we'd like to interrupt any
-     // currently running animations with a new list of frames. Here
-     // The new list of frames is empty, so it halts the animation.
+	 // We'll use updatemenus (whose functionality includes menus as
+	 // well as buttons) to create a play button and a pause button.
+	 // The play button works by passing `null`, which indicates that
+	 // Plotly should animate all frames. The pause button works by
+	 // passing `[null]`, which indicates we'd like to interrupt any
+	 // currently running animations with a new list of frames. Here
+	 // The new list of frames is empty, so it halts the animation.
     updatemenus: [{
       x: 0,
       y: 0,
@@ -139,8 +151,8 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
         label: 'Pause'
       }]
     }],
-     // Finally, add the slider and use `pad` to position it
-     // nicely next to the buttons.
+	 // Finally, add the slider and use `pad` to position it
+	 // nicely next to the buttons.
     sliders: [{
       pad: {l: 130, t: 55},
       currentvalue: {
@@ -158,5 +170,6 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
     data: traces,
     layout: layout,
     frames: frames,
+    config: { responsive: true }
   });
 });

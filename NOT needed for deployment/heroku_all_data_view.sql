@@ -10,6 +10,7 @@
 	social_support,
 	continent,
 	population,
+	gdp_usd,
  	2015 as year
  from data_2015
 
@@ -27,6 +28,7 @@
 	social_support,
 	continent,
 	population,
+	gdp_usd,
  	2016 as year
  from data_2016
  
@@ -44,6 +46,7 @@
 	social_support,
 	continent,
 	population,
+	gdp_usd,
  	2017 as year
  from data_2017
  
@@ -61,6 +64,7 @@
 	social_support,
 	continent,
 	population,
+	gdp_usd,
  	2018 as year
  from data_2018
  
@@ -78,6 +82,7 @@
 	social_support,
 	continent,
 	population,
+	gdp_usd,
  	2019 as year
  from data_2019
 
