@@ -18,9 +18,9 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
         marker: {size: []},
         hovertemplate:
           "<b>%{text}</b><br><br>" +
-          "%{yaxis.title.text}: %{y:.0}<br>" +
-          "%{xaxis.title.text}: %{x:.0}<br>" +
-          "Population: %{marker.size:,}" +
+          "%{yaxis.title.text}: %{y:$0}<br>" +
+          "%{xaxis.title.text}: %{x:.0} out of 10<br>" +
+          "Population (in thousands): %{marker.size:,}" +
           "<extra></extra>"
       };
     }
@@ -112,7 +112,7 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
       range: [2, 8]
     },
     yaxis: {
-      title: 'GDP per Capita',
+      title: 'GDP per capita',
       type: [0, 2]
     },
     hovermode: 'closest',

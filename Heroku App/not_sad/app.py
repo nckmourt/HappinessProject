@@ -131,7 +131,7 @@ def ValuePredictor(to_predict_list):
 
     print(to_predict_list)
     to_predict = np.array(to_predict_list).reshape(1,6)
-    loaded_model = pickle.load(open("./model.pkl","rb"))
+    loaded_model = pickle.load(open("static/data/model.pkl","rb"))
     result = loaded_model.predict(to_predict)
     print (result[0])
     return result[0]
@@ -184,9 +184,13 @@ def process():
 def dashboard():
     return render_template("dashboard.html")
 
-@app.route("/implications")
+@app.route("/conclusions")
 def implications():
-    return render_template("implications.html")
+    return render_template("conclusions.html")
+
+@app.route("/mlearning")
+def mlearning():
+    return render_template("mlearning.html")
 
 # Query the database and send the jsonified results
 @app.route("/api/year/2015")

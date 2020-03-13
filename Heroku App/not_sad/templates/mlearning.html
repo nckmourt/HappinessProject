@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Happiness Changes</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body style="background-color:whitesmoke"> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <!-- <a class="navbar-brand" href="#">Navigation</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="charts">Countries</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Factors
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="factors">Factors</a>
+                <a class="dropdown-item" href="dashboard">Happiness Changes</a>
+                <a class="dropdown-item" href="mlearning">Machine Learning</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="conclusions">Conclusions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="predict">Quiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="process">About Us</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <br><br><br>
+    <div class="container" style="text-align: center">
+        <div class = "row">
+            <div class = "col-md-12">
+                <h1 class="display-4">Machine Learning</h1>
+                <hr>
+                <h6>There are a number of factors that make you happy! The World Happiness Report numerates the happiness index by country with a number of factors considered. We utilized Machine Learning techniques to conduct further analysis to explore the level of impacts. After cleaning and training our dataset, we ran a multi-regression analysis and created a happiness formula to better explain the correlations among the happiness factors and happiness score. We analyzed/identified that seven of these factors have a more significant impact on happiness score. We discovered that freedom and life expectancy were the factors that had the biggest impact, and generosity has a surprisingly smaller effect on happiness score. The correlations among those factors are all positive as well, which explains the existence of ripple effects These possible gaps among countries on the happiness index can be expected to vary depending on the inputs/factors involved. The results of the regression analysis between the seven factors affecting world happiness are indexed by country and shown below: 
+                </h6>
+                <img src="../static/images/mlex1.png">
+                <br> <br>
+                <h6>K-means is a machine learning algorithm that clusters data by trying to separate samples into n groups that have similar variance. It’s also represented through inertia (y-axis) which is the sum of the squared error for each respective n cluster (x-axis). Inertia essentially shows how far away the points within an n cluster are. We aim for similar variance so the  closer to zero on the y-axis, the better. 
+                </h6>
+                <img src="../static/images/mlex2.png">
+                <br> <br>
+                <h6>We used this to group our World Happiness dataset into a specific number (k) of clusters. First  had to determine/validate the number of clusters using the elbow method by running k-means clustering on the dataset for a range of values of k. Using the elbow method we determine the optimal number of clusters for k-means clustering. Because our line chart looks like an arch (elbow) it validates the value of k that is the best. The corresponding K-Means cluster reveals that citizens with lower happiness scores (x-axis) live in countries with lower levels of social support (y-axis) and those with higher happiness scores are in countries with higher levels of social support.  
+                </h6>
+                <img src="../static/images/mlex3.png">
+            </div>
+        </div>
+    </div>  
+
+    <!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
+    </div>
+</footer>
+
+<!-- add in scripts -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+<!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>  -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
