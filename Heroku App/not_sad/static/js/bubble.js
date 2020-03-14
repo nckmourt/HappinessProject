@@ -1,33 +1,31 @@
 Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.csv?access-token=5a3fb252-c13e-4269-9196-18c1e32a70c0', function (err, data) {
-  // Create a lookup table to sort and regroup the columns of data,
-  // first by year, then by continent:
   var lookup = {};
   function getData(year, continent) {
     var byYear, trace;
     if (!(byYear = lookup[year])) {;
       byYear = lookup[year] = {};
     }
-	 // If a container for this year + continent doesn't exist yet,
-	 // then create one:
     if (!(trace = byYear[continent])) {
       trace = byYear[continent] = {
         x: [],
         y: [],
+        s: [],
+        c: [],
         id: [],
         text: [],
         marker: {size: []},
         hovertemplate:
-          "<b>%{text}</b><br><br>" +
-          "%{yaxis.title.text}: %{y:$0}<br>" +
-          "%{xaxis.title.text}: %{x:.0} out of 10<br>" +
-          "Population (in thousands): %{marker.size:,}" +
-          "<extra></extra>"
+        "<b>%{text}</b><br><br>" +
+        "%{yaxis.title.text}: %{c:$.0f}<br>" +
+        "%{xaxis.title.text}: %{x:.0} out of 10<br>" +
+        "Population (in thousands): %{marker.size:,.0f}<br>" +
+        "Life expectancy: %{s:.0}<br>" +
+        "<extra></extra>"
       };
     }
     return trace;
   }
 
-  // Go through each row, get the right trace, and append the data:
   for (var i = 0; i < data.length; i++) {
     var datum = data[i];
     var trace = getData(datum.year, datum.continent);
@@ -35,29 +33,24 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
     trace.id.push(datum.country);
     trace.x.push(datum.happiness_score);
     trace.y.push(datum.gdp_per_capita);
+    trace.s.push(datum.life_expectancy);
+    trace.c.push(datum.gdp_usd);
     trace.marker.size.push(datum.population);
   }
 
-  // Get the group names:
   var years = Object.keys(lookup);
-  // In this case, every year includes every continent, so we
-  // can just infer the continents from the *first* year:
   var firstYear = lookup[years[0]];
   var continents = Object.keys(firstYear);
 
-  // Create the main traces, one for each continent:
   var traces = [];
   for (i = 0; i < continents.length; i++) {
     var data = firstYear[continents[i]];
-	 // One small note. We're creating a single trace here, to which
-	 // the frames will pass data for the different years. It's
-	 // subtle, but to avoid data reference problems, we'll slice
-	 // the arrays to ensure we never write any new data into our
-	 // lookup table:
     traces.push({
       name: continents[i],
       x: data.x.slice(),
       y: data.y.slice(),
+      s: data.s.slice(),
+      c: data.c.slice(),
       id: data.id.slice(),
       text: data.text.slice(),
       mode: 'markers',
@@ -65,20 +58,10 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
         size: data.marker.size.slice(),
         sizemode: 'area',
         sizeref: 150,
-      hovertemplate:
-        "<b>%{text}</b><br><br>" +
-        "%{yaxis.title.text}: %{y:.0}<br>" +
-        "%{xaxis.title.text}: %{x:.0}<br>" +
-        "Population: %{marker.size:,}" +
-        "<extra></extra>"
       }
     });
   }
 
-  // Create a frame for each year. Frames are effectively just
-  // traces, except they don't need to contain the *full* trace
-  // definition (for example, appearance). The frames just need
-  // the parts the traces that change (here, the data).
   var frames = [];
   for (i = 0; i < years.length; i++) {
     frames.push({
@@ -89,10 +72,6 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
     })
   }
 
-  // Now create slider steps, one for each frame. The slider
-  // executes a plotly.js API command (here, Plotly.animate).
-  // In this example, we'll animate to one of the named frames
-  // created in the above loop.
   var sliderSteps = [];
   for (i = 0; i < years.length; i++) {
     sliderSteps.push({
@@ -113,16 +92,9 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
     },
     yaxis: {
       title: 'GDP per capita',
-      type: [0, 2]
+      range: [0, 2]
     },
     hovermode: 'closest',
-	 // We'll use updatemenus (whose functionality includes menus as
-	 // well as buttons) to create a play button and a pause button.
-	 // The play button works by passing `null`, which indicates that
-	 // Plotly should animate all frames. The pause button works by
-	 // passing `[null]`, which indicates we'd like to interrupt any
-	 // currently running animations with a new list of frames. Here
-	 // The new list of frames is empty, so it halts the animation.
     updatemenus: [{
       x: 0,
       y: 0,
@@ -151,13 +123,11 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
         label: 'Pause'
       }]
     }],
-	 // Finally, add the slider and use `pad` to position it
-	 // nicely next to the buttons.
     sliders: [{
       pad: {l: 130, t: 55},
       currentvalue: {
         visible: true,
-        prefix: 'Year:',
+        prefix: 'Year: ',
         xanchor: 'right',
         font: {size: 20, color: '#666'}
       },
@@ -165,7 +135,6 @@ Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.cs
     }]
   };
 
-  // Create the plot:
   Plotly.newPlot('myDiv', {
     data: traces,
     layout: layout,
