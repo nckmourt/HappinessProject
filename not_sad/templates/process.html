@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us</title>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
     <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -57,7 +58,43 @@
     <div id=user class="container-fluid content-row" style="text-align: center">
         <h1 class="display-2">About Us</h1>
         <hr>
-        <p class="lead">An in-depth view of our process: <br> what worked and what didn't</p>
+        <p class="lead">Connect with Us</p>
+    </div>
+    <div class = "container"style="text-align: center" >
+        <div class = "row">
+            <div class = "col-md-6">
+                <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="trangat"><a class="LI-simple-link" href='https://www.linkedin.com/in/trangat?trk=profile-badge'>Tara Rangat</a></div>
+            </div>
+            <div class = "col-md-6">
+                <div class=“LI-profile-badge”  data-version=“v1" data-size=“medium” data-locale=“en_US” data-type=“vertical” data-theme=“light” data-vanity=“nickmourtoupalas”><a class=“LI-simple-link” href=‘https://www.linkedin.com/in/nickmourtoupalas?trk=profile-badge’>Nick Mourtoupalas</a></div>
+            </div>
+            <br> <br> 
+            <div class = "col-md-6">
+                <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="daluongo"><a class="LI-simple-link" href='https://www.linkedin.com/in/daluongo?trk=profile-badge'>D. Luongo</a></div>
+            </div>
+            <div class = "col-md-6">
+                <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="robel-wondimu-718173a5"><a class="LI-simple-link" href='https://www.linkedin.com/in/robel-wondimu-718173a5?trk=profile-badge'>Robel Wondimu</a></div>
+            </div>
+                
+                
+                
+                
+                
+
+            </div>
+        </div>
+    </div>
+   
+
+    
+
+    <div class="container" style="text-align: center">
+        <div class = "row">
+          <div class = "col-md-12">
+          <h1>Our Process</h1>
+          <hr>
+          </div>
+        </div> 
     </div>
     
     <!-- create section with process information -->
@@ -175,15 +212,19 @@
         <div class ="row">
             <div class = "col-md-12">
                 <h2>A Deep Dive into GDP: </h2>
-                <h6>Nick started making this visualization by referencing Plotly.D3 documentation to read our CSV data files by year, then creating an array of countries, their life expectancies, GDPs per capita, and Happiness Scores. After creating containers for what will be the bubble sizes and the x and y axes, he called Plotly to assign the read traces into the plotting function. A for loop is used to go through each row, get the right trace, and append the data. He created a single trace here, to which the frames will pass data for the different years. Then he created a frame for each year, which are effectively just traces, except they do not need to contain the full trace definition (for example, appearance). The frames just need the parts of the traces that change (in this case, the data).
+                <h6>Nick started making this visualization by referencing Plotly.D3 documentation to read our CSV data files by year, then creating an array of countries, their life expectancies, GDP per capita, and Happiness Scores. After creating containers for what will be the bubble sizes and the x and y axes, he called Plotly to assign the read traces into the plotting function. A for loop is used to go through each row, get the right trace, and append the data. He created a single trace here, to which the frames will pass data for the different years. Then he created a frame for each year, which are effectively just traces, except they do not need to contain the full trace definition (for example, appearance). The frames just need the parts of the traces that change (in this case, the data). Hovertemplate lets us call values from the CSV to be conveniently displayed as you hover over each country’s bubbles.
+                    <br>
+                    <img src="../static/images/bubble1.png">
                     <br><br>
-                    Next, he created the slider steps, one for each frame. The slider executes a plotly.js API command (Plotly.animate). He animated to one of the named frames created in the loop made earlier. He used updatemenus to create a play button and a pause button. The play button works by passing ‘null’, which indicates that Plotly should animate all frames. The pause button works by passing ‘[null]’, which interupts any current running animations with a new list of frames. Finally, he added the slider and used ‘pad’ to position it nicely next to the buttons, and then create the plot. From there, the bubble chart plays using our happiness data represented dynamically through the Plotly animation slider, uses color-coding to differentiate between countries, and can be examined closely over the last five years.</h6>
+                    Next, he created the slider steps, one for each frame. The slider executes a plotly.js API command (Plotly.animate). He animated to one of the named frames created in the loop made earlier. He used updatemenus to create a play button and a pause button. The play button works by passing ‘null’, which indicates that Plotly should animate all frames. The pause button works by passing ‘[null]’, which interrupts any current running animations with a new list of frames. Finally, he added the slider and used ‘pad’ to position it nicely next to the buttons, and then create the plot. From there, the bubble chart plays using our happiness data represented dynamically through the Plotly animation slider, uses color-coding to differentiate between countries, and can be examined closely over the last five years.
+                    <img src="../static/images/bubble2.png" id="responsive-image">
+                </h6>
             </div>
         </div>
     </div>
 
 
-    <div class ="container">
+    <!-- <div class ="container">
         <div class ="row">
             <div class = "col-md-12">
                 <h2>Tableau Dashboard: </h2>
@@ -194,7 +235,7 @@
                     <img src="image"></h6>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class ="container">
         <div class ="row">
@@ -224,16 +265,17 @@
                     •	Modified decision tree logic from class exercise to read in input file (tweaked file to ensure not overfitting model
                     <br>
                     •	Defined the X,y values and fit the model which created a decision tree map
-                    <br>
+                    <br><br>
                     <img src="../static/images/ml1.png">
-                    <br>
+                    <br><br>
                     •	Then serialized the model to a file called model.pkl in order later use with new unknown data to predict user happiness.
-                    <br>
+                    <br><br>
                     <img src="../static/images/ml3.png" id="responsive-image">
                     <br> <br> 
                     HTML – User Interaction
                     <br>
-                    Created form for user to enter country from 2019 surveyed countries. Selection triggers JS to get country’s score and return value of 0 or 1 to the form if the rank is <5 and >4 respectively. The user completes the rest of the form and submits. 
+                    Created form for user to enter country from 2019 surveyed countries. Selection triggers JS to get country’s score and return value of 0 or 1 to the form if the rank is <5 and >4 respectively. The user completes the rest of the form and submits.
+                    <br><br> 
                     <img src="../static/images/ml2.png">
                     <br> <br>
                     FLASK– User Form Submission
@@ -316,6 +358,7 @@
 </footer>
 
 <!-- add in scripts -->
+   
 
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
