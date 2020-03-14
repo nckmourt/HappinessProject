@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="../static/css/style.css">
+ 
+</head>
+
+<body style="background-color: whitesmoke">
+    <!-- create Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <!-- <a class="navbar-brand" href="#">Navigation</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="charts">Countries</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Factors
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="factors">Factors</a>
+                <a class="dropdown-item" href="dashboard">Happiness Changes</a>
+                <a class="dropdown-item" href="mlearning">Machine Learning</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="conclusions">Conclusions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="predict">Quiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="process">About Us</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <!-- create header -->
+    <br><br><br>
+    <div id=user class="container-fluid content-row" style="text-align: center">
+        <h1 class="display-2">About Us</h1>
+        <hr>
+        <p class="lead">Connect with Us</p>
+    </div>
+    <div class = "container"style="text-align: center" >
+        <div class = "row">
+            <div class = "col-md-6">
+                <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="trangat"><a class="LI-simple-link" href='https://www.linkedin.com/in/trangat?trk=profile-badge'>Tara Rangat</a></div>
+            </div>
+            <div class = "col-md-6">
+                <div class=“LI-profile-badge”  data-version=“v1" data-size=“medium” data-locale=“en_US” data-type=“vertical” data-theme=“light” data-vanity=“nickmourtoupalas”><a class=“LI-simple-link” href=‘https://www.linkedin.com/in/nickmourtoupalas?trk=profile-badge’>Nick Mourtoupalas</a></div>
+            </div>
+            <br> <br> 
+            <div class = "col-md-6">
+                <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="daluongo"><a class="LI-simple-link" href='https://www.linkedin.com/in/daluongo?trk=profile-badge'>D. Luongo</a></div>
+            </div>
+            <div class = "col-md-6">
+                <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="robel-wondimu-718173a5"><a class="LI-simple-link" href='https://www.linkedin.com/in/robel-wondimu-718173a5?trk=profile-badge'>Robel Wondimu</a></div>
+            </div>
+                
+                
+                
+                
+                
+
+            </div>
+        </div>
+    </div>
+   
+
+    
+
+    <div class="container" style="text-align: center">
+        <div class = "row">
+          <div class = "col-md-12">
+          <h1>Our Process</h1>
+          <hr>
+          </div>
+        </div> 
+    </div>
+    
+    <!-- create section with process information -->
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>Initial Data Gathering: </h2>
+                <h6>Using the information from the World Happiness Reports (2015-2019), our group seeks to identify what factors, if any, can make an impact on happiness. The dataset found on <a href="https://www.kaggle.com/unsdsn/world-happiness">Kaggle</a> allowed us to explore this question more in-depth. The six main factors the report explores are as follows: economic production, social support, life expectancy, freedom, absence of corruption, and generosity. 
+                    The happiness scores and rankings use data from the Gallup World Poll based on answers to the main life evaluation question asked in the poll. This method, known as the Cantril ladder, asks respondents to think of a ladder with the best possible life for them being a ten and the worst possible life being a zero and to rate their own current lives on that scale. The scores are nationally representative. </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>Database and App Summary: </h2>
+                <h6>D. Luongo located the raw data on Kaggle, which consisted of five (5) csv files corresponding to the results of the World Gallup Poll happiness ranking from 2015-2019. She then downloaded the csv files locally and read them into Python to clean the data and to store it into Pandas dataframes for each year. She imported these dataframes as tables into a local SQL database, using Python. Next, she created an app on Heroku (opposite-of-sadness) and set up a cloud-based Postgres database for it, also on Heroku. After creating the Postgres database, new tables had to be created, matching the tables in the local SQL database. Then, the data were exported from the local database tables and imported into the Heroku Postgres database tables.
+                    <br> <br>
+                    <img src="../static/images/database1.png">
+                    <br>
+                    Nick and D found additional data sources to include population, continent, and GDP per Capita in USD. This data was added to the original csv files and the tables were re-created through the process described above. In order to create one table with all of the data spanning 2015-2019, D. then created a View in the Postgres Database on the Heroku server. The view was created by using the “union all” code in Postgres. This joined every column in each table to create one complete view of the data for use in visualizations needing longitudinal data.
+                    <br> <br> 
+                    <img src="../static/images/database2.png">
+                    <img src="../static/images/database3.png">
+                    <br>
+                    Next, she established the file structure for Heroku to launch the app correctly. This consisted of the following files: initdb.py, Procfile, requirements.txt, run.sh, runtime.txt, and __init__.py. After those were created and filed in the correct structure, she created the app.py file. In this file, the Flask app and database were both set up. The database was read in through the operating system environment within Heroku, pointing to the Heroku Postgres database. Then database models were created for each table, displaying each country’s name and their scores in the eight categories. After the database models were created, API calls were created for each Postgres table, and the results were jsonified so that they could be read by the code created for each visualization.
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>Data_All File Merge: </h2>
+                <h6> Desiree did all of the hard work of data clean-up of the data and built separate .csv files and tables for each year in the postgressql database. For those who would rather make one data call and sort or map versus the year instead of making several data call to the database, Demetria created a data-all file. Since the data was already standardized across the files, she only needed to append the files and chose to use concatenate logic rather than merge. Using python and jupyter notebook, each file was read into a pandas data frame (df).  A year column was added to each year and updated with the year of each corresponding file.  The df columns were reordered placing “year” as the first data column. Since the columns for 2015-2017 were the same, the data frames were combined using .append. 
+                    <br><br>
+                    <img src="../static/images/datamerge.png">
+                    <br><br>
+                    The same was done for the 2018-2019 dataframes and then the two dataframes were then joined.   No columns were lost, but the different column in the 2018-2019 df was placed at the end of the combined df.  For 2015-2017 years, the column (social support) is null.  The same occurs for the 2018-2019 records, the 2015-2017 column, “family” is null. The combined df was then exported to a .csv file. 
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>Global Happiness - World Map: </h2>
+                <h6>Peter and Robel, using the World Happiness csv files and the polygon coordinate data in the geojson, created a map to visualize happiness rankings across the globe. They did extensive research online and tried different ways to combine the World Happiness Report data with countries’ coordinate data. They used python and pandas to combine the coordinate data with the csv files and convert to the geojson format. They used geojson data to produce the world map with a choropleth layer, pop-up markers, and a legend.  
+                    <br><br>
+                    <img src="../static/images/map1.png">
+                    <br><br>
+                    <img src="../static/images/map2.png">
+                    <br><br>
+                    <img src="../static/images/map3.png">
+                    <br><br>
+                    Robel started by creating an array of cities and their locations (long/lat) and Happiness Score. He created a blank array to store countryMarkers. CountryMarkers will show the country name and Happiness Score. A loop looped through the countries array, created a new marker, and pushed it to the countryMarkers array. He added all the countryMarkers to one new layer group so layers can be referenced as a group and not individually. He then used the baseMaps variable to set the light layer, then overlayMaps variable to add countryMarker as a layer. He used myMap variable to create a map and center on Finland – the happiest country in world – and set light basemap and countries overlay as default layer. Lastly, he passed the map layers into layer control and added the layer control to the map. The point of countryMarker is to show that Nordic countries are the happiest in the world. Peter took over with ETL our data and creating a geojson file to make the choropleth layer. 
+                    <br><br>
+                    <img src="../static/images/map4.png">
+                    <br><br>
+                    <img src="../static/images/map5.png">
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>Measuring Happiness - Select Your Country: </h2>
+                <h6>HTML Logic allows user to select country from a dropdown of surveyed countries then calls, JS code to pull the rank and factors over the past 5 years.  The data is shown in two different plotly charts: the line graph shows the change in rank for each year; the bar chart shows the factor values for each year.
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>Top Ten Happiest Countries: </h2>
+                <h6>The page was designed using HTML, CSS, and a few lines of Java Script written directly in the HTML file and displays the information on the website as an interactive carousel. 
+                    <br> <br>
+                    The HTML code organizes the information for the top 10 countries using a slideshow container: an image of the country’s flag, the country’s rank, and a small blurb about the country sourced from Wikipedia report on the 2020 World Happiness Report and searches on the top 10 countries.  W3 HTML slideshow tutorial was used to design this slideshow. CSS styling was used to format the content container, controls, and indicators for the slide show.  The controls are the navigation arrows (next and prev) used to advance the slides.  The indicators are dots at the bottom of the slideshow that indicate where the viewer is in the slide deck. The indicator may also be used to select slides. <br>
+                    <br>
+                    The JavaScript code is very minimal but provides the “do something” logic that advances or switches the slide based on the viewers use of the control and indicator arrow/dots to navigate the slides.
+                    <br><br>
+                    <img src="../static/images/top10.png">
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>A Look at the Factors - Scatter Visualization: </h2>
+                <h6>Demetria charted the correlation between the Happiness Score and each of the 6 happiness factors used in the 2019 World Happiness Report.  
+                    <br><br>
+                    She read in current year (2019) data file from the postgresql database using flask/sqlalchemy. Next, used the map method to create new arrays for each of the factors, including country and happiness rank.Then, used d3.plotly to create a scatter plot (create 6 plots for each factor) to display the correlation between the happiness score for each country and the factor value for each country. The happiness score determines the position on the horizontal axis.  The factor value determines the position on the vertical axis.  Plot markers represent the country and are color coded based on the happiness rank for each country.  A legend displays the color code for the happiness ranking with the highest rank (darkest color) at the bottom rising to the lowest rank (lightest color) at the top.  
+                    <br><br>
+                    The x and y-axis ranges were standardized across the plots to provide a “at a glance” view of how each factor related to the happiness score on the same scale.  The default for the ranges was the low and high values of the happiness score and factor value for each factor plot, which “at a glance” skewed the comparative view of the relationships of happiness across plots
+                    <br><br>
+                    Note: javascript plotly does not display the legend the same as the python version of plotly.  It does not appear to allow the capability to name legends that are auto-generated from a data series (at least not for the novice).  Also, the values displayed in the legend do not correspond to the ranking value, but rather some other generated value based on the rank value… Demetria was not sure what the listed number was. The python plotly version appeared to use the column value from the database in the legend.<br>
+                    <br>
+                    To visualize the plots on the website, she used HTML bootstrap layout container and card formatting.  Each plot is displayed with a bootstrap card (a styled content container - bordered box with formatting options like header, footer, title, content). The bootstrap layout container was used for margin-setting and wrapping.<br>
+                    <img src="../static/images/factors.png">
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>A Deep Dive into GDP: </h2>
+                <h6>Nick started making this visualization by referencing Plotly.D3 documentation to read our CSV data files by year, then creating an array of countries, their life expectancies, GDP per capita, and Happiness Scores. After creating containers for what will be the bubble sizes and the x and y axes, he called Plotly to assign the read traces into the plotting function. A for loop is used to go through each row, get the right trace, and append the data. He created a single trace here, to which the frames will pass data for the different years. Then he created a frame for each year, which are effectively just traces, except they do not need to contain the full trace definition (for example, appearance). The frames just need the parts of the traces that change (in this case, the data). Hovertemplate lets us call values from the CSV to be conveniently displayed as you hover over each country’s bubbles.
+                    <br>
+                    <img src="../static/images/bubble1.png">
+                    <br><br>
+                    Next, he created the slider steps, one for each frame. The slider executes a plotly.js API command (Plotly.animate). He animated to one of the named frames created in the loop made earlier. He used updatemenus to create a play button and a pause button. The play button works by passing ‘null’, which indicates that Plotly should animate all frames. The pause button works by passing ‘[null]’, which interrupts any current running animations with a new list of frames. Finally, he added the slider and used ‘pad’ to position it nicely next to the buttons, and then create the plot. From there, the bubble chart plays using our happiness data represented dynamically through the Plotly animation slider, uses color-coding to differentiate between countries, and can be examined closely over the last five years.
+                    <img src="../static/images/bubble2.png" id="responsive-image">
+                </h6>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>Tableau Dashboard: </h2>
+                <h6>paragraph 1  
+                    <br><br>
+                    paragraph 2
+                    <br><br>
+                    <img src="image"></h6>
+            </div>
+        </div>
+    </div> -->
+
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>Machine Learning Decision Tree Prediction Model: </h2>
+                <h6>Input Data
+                    World Happiness 2019 Score range - Carl Jung's 5 Factors of Happiness:
+                    <br>
+                    •	Good Physical Health
+                    <br>
+                    •	Good persona and intimate relationship (marriage family friends)
+                    <br>
+                    •	The faculty to perceive beauty in art and nature
+                    <br>
+                    •	Reasonable stands of living/satisfactory work
+                    <br>
+                    •	Philosophic or religious point of view capable for coping successfully with the vicissitudes of life
+                    <br>
+                    •	Responses:   Yes  No  It’s Complicated
+                    <br>
+                    •	Value:  Yes = 10   No = 1   Complicated = 5
+                    <br>
+                    •	Input values are not scientific, but assigned to team
+                    <br> <br>
+                    Jupiter Notebook Decision Tree
+                    <br>
+                    •	Modified decision tree logic from class exercise to read in input file (tweaked file to ensure not overfitting model
+                    <br>
+                    •	Defined the X,y values and fit the model which created a decision tree map
+                    <br><br>
+                    <img src="../static/images/ml1.png">
+                    <br><br>
+                    •	Then serialized the model to a file called model.pkl in order later use with new unknown data to predict user happiness.
+                    <br><br>
+                    <img src="../static/images/ml3.png" id="responsive-image">
+                    <br> <br> 
+                    HTML – User Interaction
+                    <br>
+                    Created form for user to enter country from 2019 surveyed countries. Selection triggers JS to get country’s score and return value of 0 or 1 to the form if the rank is <5 and >4 respectively. The user completes the rest of the form and submits.
+                    <br><br> 
+                    <img src="../static/images/ml2.png">
+                    <br> <br>
+                    FLASK– User Form Submission
+                    <br>
+                    The form submission/post triggers flask to run the prediction model using the user input data and returns the prediction to a new results.html page
+                    <img src="../static/images/ml4.png" id="responsive-image">
+                    <br> <br> 
+                    HTML – Results
+                    <br>
+                    The results page renders the model prediction. Built a fun animated background for this page.  Bird animation is pure CSS and HTML.
+                    <br>
+                    1.	Inserted bird.svg from web
+                    <br>
+                    2.	Put the bird image in a container
+                    <br>
+                    3.	Used css @keyframes and transform to animate the bird motion over a background image
+                    <img src="../static/images/ml5.png" id="responsive-image">
+                    <img src="../static/images/ml6.png" id="responsive-image">
+                    <img src="../static/images/ml7.png" id="responsive-image">
+                    <br> <br>
+                    </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class ="container">
+        <div class ="row">
+            <div class = "col-md-12">
+                <h2>ML Happiness Decision Tree Map Analysis: </h2>
+                <h6>The decision tree uses input file happiness decisions to calculate the odds for user happiness.  Happiness is ranked from 0-4
+                    <br><br>
+                    Happiness rankings:
+                    <br>
+                    •	4 = Very Happy
+                    <br>
+                    •	3 = Happy
+                    <br>
+                    •	2 = Somewhat Happy 
+                    <br>
+                    •	1 = Not too Happy 
+                    <br>
+                    •	0 = Not Happy
+                    <br><br>    
+                    Aspects of the decision tree:
+                    <img src="../static/images/ml8.png" >
+                    <br><br>
+                    Score
+                    <br>
+                    •	Rank <= 0.5 means that every country with a score of 0.5 or lower will follow the True arrow (to the left), and the rest will follow the False arrow (to the right).
+                    <br>
+                    •	gini = 0.72 refers to the quality of the split, and is always a number between 0.0 and 0.72, where 0.0 would mean all of the samples got the same result, and 0.72 would mean that the split is done exactly in the middle.
+                    <br>
+                    •	samples =268 means that there are 268 scenarios left at this point in the decision which is all of them since this is the first step.  
+                    <br>
+                    •	value = [86 96 51, 30, 5] means that of these 268 scenarios:
+                    <br>
+                        - 86 will get a "NOT HAPPY"
+                    <br>
+                        - 96 will get a "NOT TOO HAPPY"
+                    <br>
+                        - 51 will get a “SOMEWHAT HAPPY”
+                    <br>
+                        - 30 will get a “HAPPY”
+                    <br>
+                        - 5 will get a “VERY HAPPY”
+                    <br>  <br>
+                    There are multiple steps in this model and each step can be explained similarly as above.  View the decisiontree.png to see each decision step
+                    <br>  <br>
+                    Note of caution: As with other decision trees, if not overfitted, the model will give different results if ran enough times, even if fed the same data.  This occurs because the tree model does not give a 100% certain answer.  Answers are based on the probability of an outcome.
+                    </h6>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
+    </div>
+</footer>
+
+<!-- add in scripts -->
+   
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html> 
+   
+    

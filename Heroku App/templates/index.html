@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Happiness Project</title>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    ​
+    <!-- Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="crossorigin=""></script>
+    ​
+    <!-- Leaflet-Choropleth JavaScript -->
+    <script type="text/javascript" src="../static/js/choropleth.js"></script>
+    ​
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body style="background-color:whitesmoke"> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="charts">Countries</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Factors
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="factors">Factors</a>
+                <a class="dropdown-item" href="dashboard">Happiness Changes</a>
+                <a class="dropdown-item" href="mlearning">Machine Learning</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="conclusions">Conclusions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="predict">Quiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="process">About Us</a>
+              </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class = "row">      
+            <div class="col-md-12">    
+                <div class="bird-box">
+
+                    <div class="bird-container">
+                        <div class="bird"></div>
+                    </div>
+                    
+                    <div class="bird-container bird-container--one">
+                        <div class="bird bird--one"></div>
+                    </div>
+                    
+                    <div class="bird-container bird-container--two">
+                        <div class="bird bird--two"></div>
+                    </div>
+                    
+                    <div class="bird-container bird-container--three">
+                        <div class="bird bird--three"></div>
+                    </div>
+                    
+                    <div class="bird-container bird-container--four">
+                        <div class="bird bird--four"></div>
+                    </div>  
+
+                    <div class="result-container"> 
+                        <h1 class="display-2">What Makes Us Happy?</h1>
+                        <h4 class="lead">Exploring The World Happiness Report</h4>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div> 
+
+<!-- <div class="jumbotron jumbotron-fluid">
+    <div class="container"></div>
+        <h1 class="display-2">What Makes Us Happy?</h1>
+        <h4 class="lead">Exploring The World Happiness Report</h4>
+    </div>
+</div> -->
+
+<!-- div with world map visualization -->
+<div class="container">
+    <div class = "row">      
+        <div class="col-md-12">        
+            <div id="map" style= "height: 650px"></div>      
+        </div>          
+    </div>
+</div>
+<!-- insert quote  -->
+<div class ="container">
+    <div class ="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-body">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">I feel that the American dream can be achieved best in the Nordic countries, where every child no matter their background or the background of their families can become anything.</p>
+                            <footer class="blockquote-footer">Sanna Marin, the 34-year-old prime minister of Finland, to the <cite title="Washington Post">Washington Post</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- insert Maslow's Hierarchy -->
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-12">
+            <img src="../static/images/maslow.png" class="img-fluid" alt="Maslow's Hierarchy">
+        </div>
+        <br>
+        <div class = "col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <p> According to Kendra Cherry's article on <a href="https://www.verywellmind.com/what-is-maslows-hierarchy-of-needs-4136760">Very Well Mind</a>, Maslow's Hierarchy of Needs - one of the best known theories of motivation - states that people generally need to fulfill the most basic needs, located at the bottom of the pyramid, first before progressing to more complex needs, located at the top of the pyramid. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- create teasers for other pages with clickable pictures -->
+<div class ="container">
+    <div class = "row">
+        <div class = "col-md-12">
+            <h1> Explore</h1>
+            <p>The United Nations publishes the World Happiness Report annually, which ranks over 150 countries based on citizens'
+                perceptions of happiness across various lifestyle measures; the measures are grouped into six factors,
+                adding to each countries' overall score.</p>
+            <h5 style="text-align: center; font-size: large">GDP per Capita&nbsp;&#8226;&nbsp;Social (and Family) Support &nbsp;&#8226;&nbsp;Life Expectancy&nbsp;&#8226;&nbsp;Freedom&nbsp;&#8226;&nbsp;Generosity&nbsp;&#8226;&nbsp;Government Corruption</h5>
+        </div>
+    </div>
+</div>
+<hr>
+<div class = "container fluid content-row">
+    <div class = "row" style= "text-align: center;">
+        <div class = "col-sm-4">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                  <h6 class="card-title">My Country and Happiness</h6>
+                  <p class="card-text" style="text-align: center; font-size: medium">See how your country measures up</p>
+                  <a href="charts" class="btn btn-primary" style= "background-color: lightblue;">Countries</a>
+                </div>
+            </div>
+        </div>
+        <div class = "col-sm-4">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                  <h6 class="card-title">Explore the Factors</h6>
+                  <p class="card-text" style="text-align: center; font-size: medium"> Take a deeper look at happiness </p>
+                  <a href="factors" class="btn btn-primary" style= "background-color: lightblue;">Factors</a>
+                </div>
+            </div>
+        </div>
+        <div class = "col-sm-4">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                  <h6 class="card-title">Are You Happy?</h6>
+                  <p class="card-text" style="text-align: center; font-size: medium">Find your own happiness score</p>
+                  <a href="predict" class="btn btn-primary" style= "background-color: lightblue;">Quiz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Tweetypy Team <br> GW Data Analytics Bootcamp 2019</p>
+    </div>
+</footer>
+
+<!-- add in scripts -->
+<script type="text/javascript" src="../static/js/selcountry.js"></script>
+
+<script type="text/javascript" src="../static/js/config.js"></script>
+<script type="text/javascript" src="../static/js/logic.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+<!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>  -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
