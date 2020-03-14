@@ -184,9 +184,13 @@ def process():
 def dashboard():
     return render_template("dashboard.html")
 
-@app.route("/implications")
+@app.route("/conclusions")
 def implications():
-    return render_template("implications.html")
+    return render_template("conclusions.html")
+
+@app.route("/mlearning")
+def mlearning():
+    return render_template("mlearning.html")
 
 # Query the database and send the jsonified results
 @app.route("/api/year/2015")
