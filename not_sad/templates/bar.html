@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Happiest Countries</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow"> -->
+        <link rel="stylesheet" href="../static/css/style.css">
+
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+       
+    </head>
+
+    <body>
+
+    <!-- create Nav Bar -->
+       
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+            <a class="navbar-brand js-scroll-trigger" href="index.html"> <img src="../static/images/happy.png" alt="happy" style="height:100%;display:inline-block;"></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html#page-top" class="nav-link js-scroll-trigger">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#world" class="nav-link js-scroll-trigger">Global Happiness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="slides.html#topten" class="nav-link js-scroll-trigger">Happiest Countries</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Explore the Factors</a>
+                        <div class="dropdown-menu">
+                            <a href="#factors" class="dropdown-item js-scroll-trigger">Factors and Happiness</a>
+                            <a href="#scatter" class="dropdown-item js-scroll-trigger">The Effect of Time</a>
+                            <a href="charts.html#country" class="dropdown-item js-scroll-trigger">My Country</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About Us</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="process.html" class="dropdown-item">Project</a>
+                            <a href="about.html" class="dropdown-item">Team</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- <div class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-5">
+                    <br><br> 
+                    <h1>Happy World.  Happy You?</h1>
+                    <br><br>
+                    <h2>Exploring the World Happiness Report  ...and why it matters.</h2>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- FACTOR BAR CHART ALL COUNTRIES -->
+    <div id=bar class="container-fluid content-row" style="text-align: center">
+        <br><br><br><br><br><br>
+        <h1 style="color:rgb(24, 3, 143); margin-left: 32px ;margin-right: 36px;">Countries by Happiness Score</h1>  
+    <br><br><br>
+    <!-- <div class="container-fluid content-row" style="text-align: center"> -->
+        <div class="container-fluid content-row" style="text-align: center">
+            <h4>SELECT A YEAR</h4> <br>
+            <select id="selYear" style="font-size:17px; height: 40px; width:100px">
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option> 
+            </select>
+            <br><br><br>
+        </div>
+    </div>
+    <p style="font-size:18px; text-align: center">(scroll to see more)</p>   
+    <br>
+    <div class="plotbox" id="rank" style="overflow-y: scroll; height:400px; width: auto; outline: lightskyblue"></div>
+    <hr>
+ 
+    <script type="text/javascript" src="../static/js/bar.js"></script>
+
+</body>
+</html>
