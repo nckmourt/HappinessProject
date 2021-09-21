@@ -1,4 +1,4 @@
-Plotly.d3.csv('https://data.heroku.com/dataclips/ixrlugzoivusffqeyjiiibpfgtpw.csv?access-token=5a3fb252-c13e-4269-9196-18c1e32a70c0', function (err, data) {
+d3.csv("./static/data/whd-2015-19.csv"), function(data) {
   // Create a lookup table to sort and regroup the columns of data,
   // first by year, then by continent:
   var lookup = {};
