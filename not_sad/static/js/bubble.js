@@ -1,4 +1,4 @@
-plotly.d3.csv("/static/data/whd-2015-19.csv"), function(data) {
+Plotly.d3.csv("https://raw.githubusercontent.com/nckmourt/HappinessProject/master/Heroku%20App/not_sad/static/data/whd-2015-19.csv", function(data) {
   var lookup = {};
   function getData(year, continent) {
     var byYear, trace;
