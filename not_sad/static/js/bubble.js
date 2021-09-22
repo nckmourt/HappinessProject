@@ -1,4 +1,4 @@
-Plotly.d3.csv("https://raw.githubusercontent.com/nckmourt/HappinessProject/Project_3_Deploy/not_sad/static/data/dataclips_nbzncrjjvuqaroltgwiiljatbreo%20(7).csv", function(data) {
+Plotly.d3.csv("https://data.heroku.com/dataclips/dienuqabdzzoxctfcrtcljtecmar.csv", function(data) {
   var lookup = {};
   function getData(year, continent) {
     var byYear, trace;
