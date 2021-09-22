@@ -1,4 +1,4 @@
-d3.csv("./static/data/whd-2015-19.csv"), function(data) {
+Plotly.d3.csv("https://data.heroku.com/dataclips/dienuqabdzzoxctfcrtcljtecmar.csv", function(data) {
   var lookup = {};
   function getData(year, continent) {
     var byYear, trace;
